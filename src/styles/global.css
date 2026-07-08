@@ -1,0 +1,58 @@
+/* Imports */
+@import './variables.css';
+@import './media.css';
+@import './utilities.css';
+@import "./layout.css";
+
+
+/* CSS Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-heading);
+  line-height: 1.2;
+  font-weight: 700;
+}
