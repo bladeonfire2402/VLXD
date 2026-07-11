@@ -20,7 +20,7 @@ const TESTIMONIALS_DATA = [
     name: 'NGÔ HOÀI THANH',
     role: '/ KINH DOANH TỰ DO',
     avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&q=80',
-    quote: 'Vật liệu xây dựng do Tư Thành Phát cung cấp luôn có giấy tờ xuất xứ rõ ràng, số lượng chính xác. Nhân viên tư vấn nhiệt tình và nhanh chóng.'
+    quote: 'Vật liệu xây dựng do Anh Tuấn cung cấp luôn có giấy tờ xuất xứ rõ ràng, số lượng chính xác. Nhân viên tư vấn nhiệt tình và nhanh chóng.'
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ const TestimonialSection = () => {
     <SectionWrapper>
       <Container>
         <StyledSectionTitle title="MỌI NGƯỜI NÓI GÌ?" />
-        
+
         <SliderContainer>
           <TestimonialContent key={currentTestimonial.id}>
             <AvatarContainer>
@@ -67,7 +67,7 @@ const TestimonialSection = () => {
             </AuthorInfo>
             <Quote>{currentTestimonial.quote}</Quote>
           </TestimonialContent>
-          
+
           <DotsContainer>
             {TESTIMONIALS_DATA.map((_, index) => (
               <Dot

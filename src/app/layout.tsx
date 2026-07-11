@@ -8,6 +8,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import { GlobalModalManager } from "@/components/shared/modal/GlobalModalManager";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SocialMediaBar } from "@/components/layout/social-media-bar";
 
 const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin", "vietnamese"] });
 
@@ -18,32 +19,35 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="vi">
-      <body className={roboto.className}>
-        <StyledComponentsRegistry>
-          <Providers>
-          {/* Layer 1: Layout Wrapper */}
-          <div className="app-wrapper">
-            <Header />
-            
-            {/* Layer 1: Main Content Screen */}
-            <main className="main-content">
-              {children}
-            </main>
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
+    return (
+      <html lang="vi">
+        <body className={roboto.className}>
+          <StyledComponentsRegistry>
+            <Providers>
+            {/* Layer 1: Layout Wrapper */}
+            <div className="app-wrapper">
+              <Header />
+              
+              {/* Layer 1: Main Content Screen */}
+              <main className="main-content">
+                {children}
+              </main>
 
-            <Footer />
-          </div>
+              <Footer />
+            </div>
 
-          {/* Layer 2: Global Modal Manager */}
-          <GlobalModalManager />
-          <ToastContainer position="bottom-right" autoClose={3000} />
-          </Providers>
-        </StyledComponentsRegistry>
-      </body>
-    </html>
-  );
-}
+            {/* Floating Social Media Bar */}
+            <SocialMediaBar position="bottom-right" phoneNumber="0909 553 750" />
+
+            {/* Layer 2: Global Modal Manager */}
+            <GlobalModalManager />
+            <ToastContainer position="bottom-right" autoClose={3000} />
+            </Providers>
+          </StyledComponentsRegistry>
+        </body>
+      </html>
+    );
+  }

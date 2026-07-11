@@ -33,7 +33,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       toast.success('Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ lại sớm nhất.');
@@ -47,7 +47,7 @@ const ContactPage = () => {
         <Grid>
           {/* Left Column: Company Info */}
           <Column>
-            <SectionTitle>CÔNG TY TNHH MTV VẬT LIỆU XÂY DỰNG TƯ THÀNH PHÁT</SectionTitle>
+            <SectionTitle>CÔNG TY TNHH MTV VẬT LIỆU XÂY DỰNG Anh Tuấn</SectionTitle>
             <TitleDivider>
               <SquareIcon />
               <YellowLine />
@@ -131,8 +131,8 @@ const ContactPage = () => {
                 <StyledTextarea placeholder="Lời nhắn *" />
               </InputGroup>
 
-              <SubmitButton 
-                type="button" 
+              <SubmitButton
+                type="button"
                 onClick={handleSubmit}
                 disabled={isSubmitting}
                 style={{ opacity: isSubmitting ? 0.7 : 1 }}
@@ -151,7 +151,7 @@ const ContactPage = () => {
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Google Map VLXD Tư Thành Phát"
+          title="Google Map VLXD Anh Tuấn"
         />
       </MapContainer>
     </ContactWrapper>

@@ -93,7 +93,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
           <ProductName>{product.name}</ProductName>
           <ProductPrice>{product.price || 'Liên hệ'}</ProductPrice>
           <ProductDescription>
-            Tư Thành Phát luôn là địa chỉ cung cấp {product.name.toLowerCase()} của mọi công trình,
+            Anh Tuấn luôn là địa chỉ cung cấp {product.name.toLowerCase()} của mọi công trình,
             nhận đơn đặt hàng theo hợp đồng, phân phối cho mọi công trình lớn nhỏ.
           </ProductDescription>
           <ContactButton onClick={() => setActiveTab('order')}>

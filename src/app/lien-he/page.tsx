@@ -1,8 +1,8 @@
 import ContactPage from '@/views/Contact';
 
 export const metadata = {
-  title: 'Liên Hệ | VLXD Tư Thành Phát',
-  description: 'Liên hệ với Công ty TNHH MTV Vật Liệu Xây Dựng Tư Thành Phát.',
+  title: 'Liên Hệ | VLXD Anh Tuấn',
+  description: 'Liên hệ với Công ty TNHH MTV Vật Liệu Xây Dựng Anh Tuấn.',
 };
 
 export default function LienHe() {

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>Về VLXD Pro</h3>
+          <h3>Về VLXD Anh Tuấn</h3>
           <p>
             Hệ thống phân phối vật liệu xây dựng hàng đầu. 
             Cung cấp sản phẩm chất lượng cao, giá cả cạnh tranh 

@@ -28,8 +28,10 @@ import {
 
 const content = {
   logo: AssetManager.logo,
-  address: "71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM",
+  address: "251,",
   hotline: "0909 553 750",
+  addressTitle: "Địa chỉ",
+  hotlineTitle: "Hotline",
 };
 
 export const DesktopHeader = () => {
@@ -44,24 +46,24 @@ export const DesktopHeader = () => {
             <DesktopLogo href="/">
               <img src={content.logo} alt="Tu Thanh Phat Logo" />
             </DesktopLogo>
-            
+
             <DesktopInfo>
               <InfoItem>
                 <InfoIcon>
                   <MapPin size={24} />
                 </InfoIcon>
                 <InfoText>
-                  <InfoLabel>ĐỊA CHỈ</InfoLabel>
+                  <InfoLabel>{content.addressTitle}</InfoLabel>
                   <InfoValue>{content.address}</InfoValue>
                 </InfoText>
               </InfoItem>
-              
+
               <InfoItem>
                 <InfoIcon>
                   <Phone size={24} />
                 </InfoIcon>
                 <InfoText>
-                  <InfoLabel>HOTLINE</InfoLabel>
+                  <InfoLabel>{content.hotlineTitle}</InfoLabel>
                   <InfoValue>{content.hotline}</InfoValue>
                 </InfoText>
               </InfoItem>
@@ -77,17 +79,17 @@ export const DesktopHeader = () => {
             <DesktopNavList>
               {MENU_ITEMS.map((item, index) => {
                 const isActive = pathname === item.url || (item.url !== '/' && pathname?.startsWith(item.url));
-                
+
                 return (
                   <DesktopNavItem key={index}>
-                    <DesktopNavLink 
-                      href={item.url} 
+                    <DesktopNavLink
+                      href={item.url}
                       $isActive={isActive}
                     >
                       {item.label}
                       {item.children && <ChevronDown size={16} />}
                     </DesktopNavLink>
-                    
+
                     {item.children && (
                       <DesktopDropdown>
                         <DesktopDropdownList>

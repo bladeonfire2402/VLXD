@@ -15,18 +15,18 @@ import {
 
 const FAQ_DATA = [
   {
-    title: 'TƯ THÀNH PHÁT HOẠT ĐỘNG TỪ KHI NÀO?',
-    content: 'Công ty TNHH SX-TM-DV Tư Thành Phát được thành lập vào tháng 01 năm 2008. Đây là thời kỳ ngành xây dựng Việt Nam có nhiều biến động và ngành vật liệu xây dựng gặp rất nhiều khó khăn. Mãi đến tháng 01 năm 2010, Tư Thành Phát mới chính thức được khách hàng ghi nhận là nhà phân phối sắt thép xây dựng hàng đầu ở TP.Hồ Chí Minh và khu vực lân cận.',
+    title: 'Anh Tuấn HOẠT ĐỘNG TỪ KHI NÀO?',
+    content: 'Công ty TNHH SX-TM-DV Anh Tuấn được thành lập vào tháng 01 năm 2008. Đây là thời kỳ ngành xây dựng Việt Nam có nhiều biến động và ngành vật liệu xây dựng gặp rất nhiều khó khăn. Mãi đến tháng 01 năm 2010, Anh Tuấn mới chính thức được khách hàng ghi nhận là nhà phân phối sắt thép xây dựng hàng đầu ở TP.Hồ Chí Minh và khu vực lân cận.',
     isOpen: true
   },
   {
     title: 'PHƯƠNG CHÂM HOẠT ĐỘNG.',
-    content: 'Chúng tôi luôn đặt lợi ích và sự hài lòng của khách hàng lên hàng đầu. Với phương châm "Uy tín - Chất lượng - Hiệu quả", Tư Thành Phát không ngừng nỗ lực để mang đến những sản phẩm và dịch vụ tốt nhất.',
+    content: 'Chúng tôi luôn đặt lợi ích và sự hài lòng của khách hàng lên hàng đầu. Với phương châm "Uy tín - Chất lượng - Hiệu quả", Anh Tuấn không ngừng nỗ lực để mang đến những sản phẩm và dịch vụ tốt nhất.',
     isOpen: false
   },
   {
-    title: 'TƯ THÀNH PHÁT PHÂN PHỐI NHỮNG SẢN PHẨM NÀO?',
-    content: 'Tư Thành Phát chuyên phân phối các loại vật liệu xây dựng như: Sắt thép xây dựng (Pomina, Việt Nhật, Miền Nam...), xi măng, gạch tuynel, cát, đá xây dựng và các loại vật liệu khác phục vụ cho mọi công trình.',
+    title: 'Anh Tuấn PHÂN PHỐI NHỮNG SẢN PHẨM NÀO?',
+    content: 'Anh Tuấn chuyên phân phối các loại vật liệu xây dựng như: Sắt thép xây dựng (Pomina, Việt Nhật, Miền Nam...), xi măng, gạch tuynel, cát, đá xây dựng và các loại vật liệu khác phục vụ cho mọi công trình.',
     isOpen: false
   }
 ];
@@ -54,7 +54,7 @@ const FAQAndCommitments = () => {
           ))}
         </LeftColumn>
         <RightColumn>
-          <CommitmentsTitle>TƯ THÀNH PHÁT CAM KẾT GÌ?</CommitmentsTitle>
+          <CommitmentsTitle>Anh Tuấn CAM KẾT GÌ?</CommitmentsTitle>
           <CommitmentList>
             {COMMITMENTS_DATA.map((commitment, index) => (
               <CommitmentItem key={index}>
