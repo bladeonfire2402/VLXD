@@ -26,7 +26,7 @@ export const MobileLogo = styled(Link)`
 `;
 
 export const MobileBottom = styled.div`
-  background-color: var(--color-nav-bg, #1a1a1a);
+  background-color: var(--color-nav-bg, #202426);
 `;
 
 export const MobileNavContainer = styled.div`
@@ -76,7 +76,7 @@ export const MobileItemHeader = styled.div`
 
 export const MobileMenuLink = styled(Link)<{ $isActive?: boolean }>`
   padding: 15px 20px;
-  color: ${({ $isActive }) => ($isActive ? "var(--color-nav-active, #ffbc13)" : "#333333")};
+  color: ${({ $isActive }) => ($isActive ? "var(--color-nav-active, #D79B4B)" : "#333333")};
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
@@ -85,7 +85,7 @@ export const MobileMenuLink = styled(Link)<{ $isActive?: boolean }>`
 `;
 
 export const MobileToggleBtn = styled.button`
-  background-color: #1a1a1a;
+  background-color: #202426;
   color: #ffffff;
   border: none;
   width: 28px;
@@ -126,6 +126,6 @@ export const MobileSubmenuLink = styled(Link)`
   font-size: 14px;
 
   &:hover {
-    color: var(--color-nav-active, #ffbc13);
+    color: var(--color-nav-active, #D79B4B);
   }
 `;

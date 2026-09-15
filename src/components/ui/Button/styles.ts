@@ -46,12 +46,12 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
     switch ($variant) {
       case 'solid':
         return css`
-          background-color: var(--primary-color, #ffbc13);
+          background-color: var(--color-primary, #B86B32);
           color: #fff;
-          border: 1px solid var(--primary-color, #ffbc13);
+          border: 1px solid var(--color-primary, #B86B32);
           &:hover {
-            background-color: #e5a811;
-            border-color: #e5a811;
+            background-color: var(--color-primary-dark, #8E4D21);
+            border-color: var(--color-primary-dark, #8E4D21);
           }
         `;
       case 'text':
@@ -60,7 +60,7 @@ export const ButtonWrapper = styled.button<ButtonWrapperProps>`
           color: var(--text-color, #333);
           border: none;
           &:hover {
-            color: var(--primary-color, #ffbc13);
+            color: var(--color-primary, #B86B32);
           }
         `;
       case 'outline':

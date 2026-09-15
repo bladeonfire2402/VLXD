@@ -18,7 +18,19 @@ export const CarouselSlide = styled.div`
   min-width: 100%;
   flex: 0 0 100%;
   height: 100%;
-  background-color: red;
+  background-color: var(--color-bg-secondary, #E9ECEB);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 36, 38, 0.5); /* Than chì 50% opacity */
+    pointer-events: none;
+  }
 `;
 
 export const SlideImage = styled.img`
@@ -73,12 +85,12 @@ export const Dot = styled.button<{ $active: boolean }>`
   height: 12px;
   border-radius: 50%;
   border: none;
-  background-color: ${props => (props.$active ? 'var(--primary-color, #ffbc13)' : 'rgba(255, 255, 255, 0.5)')};
+  background-color: ${props => (props.$active ? 'var(--primary-color, #B86B32)' : 'rgba(255, 255, 255, 0.5)')};
   cursor: pointer;
   padding: 0;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${props => (props.$active ? 'var(--primary-color, #ffbc13)' : 'rgba(255, 255, 255, 0.9)')};
+    background-color: ${props => (props.$active ? 'var(--primary-color, #B86B32)' : 'rgba(255, 255, 255, 0.9)')};
   }
 `;

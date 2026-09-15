@@ -1,24 +1,27 @@
 :root {
-  /* Primary - Orange/Brick */
-  --color-primary-light: #FF9800;
-  --color-primary: #F57C00;
-  --color-primary-dark: #E65100;
+  /* Primary - Đồng công nghiệp */
+  --color-primary-light: #D79B4B;
+  --color-primary: #B86B32;
+  --color-primary-dark: #8E4D21;
+  --primary-color: var(--color-primary);
 
-  /* Secondary - Navy/Steel */
-  --color-secondary-light: #3949AB;
-  --color-secondary: #1A237E;
-  --color-secondary-dark: #121858;
+  /* Secondary - Accent tinh tế */
+  --color-secondary-light: #F4E8D8;
+  --color-secondary: #D79B4B;
+  --color-secondary-dark: #B86B32;
+  --color-accent: #D79B4B;
 
-  /* Neutrals - Concrete/Cement */
-  --color-bg-main: #F8F9FA;
+  /* Neutrals - Bê tông / Xi măng / Than chì */
+  --color-bg-main: #F7F7F5;
+  --color-bg-secondary: #E9ECEB;
   --color-bg-card: #FFFFFF;
-  --color-border: #E9ECEF;
-  --color-text-muted: #6C757D;
-  --color-text-main: #343A40;
-  --color-text-heading: #212529;
+  --color-border: #CDD3D2;
+  --color-text-muted: #687176;
+  --color-text-main: #202426;
+  --color-text-heading: #202426;
 
   /* Semantic */
-  --color-success: #2E7D32;
+  --color-success: #58705C;
   --color-error: #D32F2F;
   --color-warning: #FBC02D;
 
@@ -43,8 +46,8 @@
   --radius-lg: 12px;
 
   /* Header Custom Colors */
-  --color-nav-bg: #1a1a1a;
-  --color-nav-active: #ffbc13;
+  --color-nav-bg: #202426;
+  --color-nav-active: var(--color-accent);
   --color-nav-text: #ffffff;
   --color-nav-hover-bg: rgba(255, 255, 255, 0.1);
   --header-height-desktop: 120px;
@@ -53,11 +56,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg-main: #121212;
-    --color-bg-card: #1E1E1E;
-    --color-border: #333333;
-    --color-text-muted: #A0A0A0;
-    --color-text-main: #E0E0E0;
-    --color-text-heading: #FFFFFF;
+    --color-bg-main: #1A1D1E;
+    --color-bg-secondary: #202426;
+    --color-bg-card: #2B2F31;
+    --color-border: #3A4244;
+    --color-text-muted: #A4AEB3;
+    --color-text-main: #E9ECEB;
+    --color-text-heading: #F7F7F5;
   }
 }

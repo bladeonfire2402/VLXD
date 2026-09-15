@@ -34,7 +34,7 @@ export const InfoItem = styled.div`
 `;
 
 export const InfoIcon = styled.div`
-  color: var(--color-nav-active, #ffbc13);
+  color: var(--color-nav-active, #D79B4B);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@ export const InfoValue = styled.span`
 `;
 
 export const DesktopBottom = styled.div`
-  background-color: var(--color-nav-bg, #1a1a1a);
+  background-color: var(--color-nav-bg, #202426);
 `;
 
 export const DesktopNavContainer = styled.div`
@@ -86,7 +86,7 @@ export const DesktopDropdown = styled.div`
   transform: translateY(10px);
   transition: all 0.3s ease;
   z-index: 100;
-  border-top: 3px solid var(--color-nav-active, #ffbc13);
+  border-top: 3px solid var(--color-nav-active, #D79B4B);
 `;
 
 export const DesktopNavItem = styled.li`
@@ -101,7 +101,7 @@ export const DesktopNavItem = styled.li`
 `;
 
 export const DesktopNavLink = styled(Link)<{ $isActive?: boolean }>`
-  color: ${({ $isActive }) => ($isActive ? "var(--color-nav-active, #ffbc13)" : "#ffffff")};
+  color: ${({ $isActive }) => ($isActive ? "var(--color-nav-active, #D79B4B)" : "#ffffff")};
   font-weight: 600;
   font-size: 14px;
   padding: 15px 20px;
@@ -113,7 +113,7 @@ export const DesktopNavLink = styled(Link)<{ $isActive?: boolean }>`
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--color-nav-active, #ffbc13);
+    color: var(--color-nav-active, #D79B4B);
   }
 `;
 
@@ -126,7 +126,7 @@ export const DesktopSearch = styled.div`
   transition: color 0.2s;
 
   &:hover {
-    color: var(--color-nav-active, #ffbc13);
+    color: var(--color-nav-active, #D79B4B);
   }
 `;
 
@@ -154,7 +154,7 @@ export const DesktopDropdownLink = styled(Link)`
 
   &:hover {
     background-color: #f9f9f9;
-    color: var(--color-nav-active, #ffbc13);
+    color: var(--color-nav-active, #D79B4B);
     padding-left: 25px;
   }
 `;

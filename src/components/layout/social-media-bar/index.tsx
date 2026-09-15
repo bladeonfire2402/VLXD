@@ -40,7 +40,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
       {/* Phone Button */}
       <SocialMediaItem
         href={`tel:${formattedPhone}`}
-        $bgColor="#2585e5"
+        $bgColor="#202426"
         $isPhone={true}
         aria-label="Gọi điện thoại"
       >
@@ -53,7 +53,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
         href={zaloLink}
         target="_blank"
         rel="noopener noreferrer"
-        $bgColor="#0068FF"
+        $bgColor="#202426"
         aria-label="Chat Zalo"
       >
         <span className="zalo-text">Zalo</span>
@@ -65,7 +65,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
         href={youtubeUrl}
         target="_blank"
         rel="noopener noreferrer"
-        $bgColor="#FF0000"
+        $bgColor="#202426"
         aria-label="Kênh Youtube"
       >
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -79,7 +79,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
         href={facebookUrl}
         target="_blank"
         rel="noopener noreferrer"
-        $bgColor="#1877F2"
+        $bgColor="#202426"
         aria-label="Trang Facebook"
       >
         <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">

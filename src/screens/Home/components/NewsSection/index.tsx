@@ -54,7 +54,7 @@ const NewsSection = () => {
       <Container>
         <SectionHeader>
           <SectionTitle
-            title="CÓ GÌ MỚI?"
+            title="TIN TỨC MỚI"
             subtitle="Cập nhật báo giá vật liệu xây dựng mới nhất và các tin nóng trong ngành xây dựng."
           />
         </SectionHeader>

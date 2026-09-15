@@ -18,13 +18,13 @@ interface ContainerProps {
 // Keyframes for animations
 const pulse = keyframes`
   0% {
-    box-shadow: 0 0 0 0 rgba(30, 136, 229, 0.7);
+    box-shadow: 0 0 0 0 rgba(184, 107, 50, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 15px rgba(30, 136, 229, 0);
+    box-shadow: 0 0 0 15px rgba(184, 107, 50, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(30, 136, 229, 0);
+    box-shadow: 0 0 0 0 rgba(184, 107, 50, 0);
   }
 `;
 
@@ -105,6 +105,7 @@ export const SocialMediaItem = styled.a<{ $bgColor: string; $isPhone?: boolean }
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--color-primary, #B86B32);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
 
