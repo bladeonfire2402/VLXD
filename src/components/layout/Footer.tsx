@@ -1,46 +1,66 @@
 import React from 'react';
 import Link from 'next/link';
+import { AssetManager } from '@/lib/AssetManager';
+
+const FooterData = {
+  LOGO_ALT: 'VLXD Anh Tuấn Logo',
+  DESCRIPTION: 'Hệ thống phân phối vật liệu xây dựng hàng đầu. Cung cấp sản phẩm chất lượng cao, giá cả cạnh tranh với dịch vụ giao hàng tận nơi.',
+  QUICK_LINKS_TITLE: 'Liên Kết Nhanh',
+  QUICK_LINKS: [
+    { label: 'Trang chủ', href: '/' },
+    { label: 'Sản phẩm', href: '/products' },
+    { label: 'Chính sách & Quy định', href: '/info' },
+    { label: 'Liên hệ', href: '/contact' },
+  ],
+  CONTACT_TITLE: 'Thông Tin Liên Hệ',
+  CONTACT_INFO: [
+    '📍 123 Đường ABC, Quận X, TP. Hồ Chí Minh',
+    '📞 1900.1234.567',
+    '✉️ contact@vlxdpro.vn',
+  ],
+  COPYRIGHT: `© ${new Date().getFullYear()} VLXD Pro. All rights reserved.`,
+  SOCIALS: [
+    { label: 'FB', ariaLabel: 'Facebook', href: '#' },
+    { label: 'ZL', ariaLabel: 'Zalo', href: '#' },
+    { label: 'YT', ariaLabel: 'Youtube', href: '#' },
+  ]
+};
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section">
-          <h3>Về VLXD Anh Tuấn</h3>
-          <p>
-            Hệ thống phân phối vật liệu xây dựng hàng đầu. 
-            Cung cấp sản phẩm chất lượng cao, giá cả cạnh tranh 
-            với dịch vụ giao hàng tận nơi.
-          </p>
+          <img src={AssetManager.logo} alt={FooterData.LOGO_ALT} style={{ maxWidth: '250px', marginBottom: '16px', display: 'block' }} />
+          <p>{FooterData.DESCRIPTION}</p>
         </div>
         
         <div className="footer-section">
-          <h3>Liên Kết Nhanh</h3>
+          <h3>{FooterData.QUICK_LINKS_TITLE}</h3>
           <ul className="footer-links">
-            <li><Link href="/">Trang chủ</Link></li>
-            <li><Link href="/products">Sản phẩm</Link></li>
-            <li><Link href="/info">Chính sách & Quy định</Link></li>
-            <li><Link href="/contact">Liên hệ</Link></li>
+            {FooterData.QUICK_LINKS.map((link, idx) => (
+              <li key={idx}><Link href={link.href}>{link.label}</Link></li>
+            ))}
           </ul>
         </div>
         
         <div className="footer-section">
-          <h3>Thông Tin Liên Hệ</h3>
+          <h3>{FooterData.CONTACT_TITLE}</h3>
           <ul className="footer-contact">
-            <li>📍 123 Đường ABC, Quận X, TP. Hồ Chí Minh</li>
-            <li>📞 1900.1234.567</li>
-            <li>✉️ contact@vlxdpro.vn</li>
+            {FooterData.CONTACT_INFO.map((info, idx) => (
+              <li key={idx}>{info}</li>
+            ))}
           </ul>
         </div>
       </div>
       
       <div className="footer-bottom">
         <div className="footer-bottom-content">
-          <p>&copy; {new Date().getFullYear()} VLXD Pro. All rights reserved.</p>
+          <p>{FooterData.COPYRIGHT}</p>
           <div className="social-links">
-            <Link href="#" aria-label="Facebook">FB</Link>
-            <Link href="#" aria-label="Zalo">ZL</Link>
-            <Link href="#" aria-label="Youtube">YT</Link>
+            {FooterData.SOCIALS.map((social, idx) => (
+              <Link key={idx} href={social.href} aria-label={social.ariaLabel}>{social.label}</Link>
+            ))}
           </div>
         </div>
       </div>

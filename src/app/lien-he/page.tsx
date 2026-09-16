@@ -1,4 +1,4 @@
-import ContactPage from '@/views/Contact';
+import ContactPage from '@/screens/Contact';
 
 export const metadata = {
   title: 'Liên Hệ | VLXD Anh Tuấn',

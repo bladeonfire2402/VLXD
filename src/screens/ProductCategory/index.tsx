@@ -6,6 +6,10 @@ import ProductCard from '@/components/ui/ProductCard';
 import { Product } from '@/types/product';
 import { PageWrapper, Description, ProductGrid } from './styles';
 
+const ProductCategoryData = {
+  CONTACT_LOG: 'Liên hệ:'
+};
+
 interface ProductCategoryPageProps {
   title: string;
   description?: string;
@@ -26,7 +30,7 @@ const ProductCategoryPage: React.FC<ProductCategoryPageProps> = ({
           <ProductCard
             key={product.id}
             product={product}
-            onClickAction={() => console.log('Liên hệ:', product.name)}
+            onClickAction={() => console.log(ProductCategoryData.CONTACT_LOG, product.name)}
           />
         ))}
       </ProductGrid>

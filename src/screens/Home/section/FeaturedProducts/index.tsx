@@ -8,6 +8,12 @@ import { MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
 import { useRouter } from 'next/navigation';
 import { SectionWrapper, GridContainer, ButtonWrapper } from './styles';
 
+const FeaturedProductsData = {
+  TITLE: "SẢN PHẨM NỔI BẬT",
+  SUBTITLE: "Các sản phẩm bán chạy nhất và được khách hàng yêu thích nhất.",
+  VIEW_ALL_BTN: "Xem tất cả sản phẩm »"
+};
+
 const FeaturedProducts = () => {
   const router = useRouter();
   
@@ -18,8 +24,8 @@ const FeaturedProducts = () => {
   return (
     <SectionWrapper>
       <SectionTitle 
-        title="SẢN PHẨM NỔI BẬT" 
-        subtitle="Các sản phẩm bán chạy nhất và được khách hàng yêu thích nhất." 
+        title={FeaturedProductsData.TITLE} 
+        subtitle={FeaturedProductsData.SUBTITLE} 
       />
       
       <GridContainer>
@@ -33,7 +39,7 @@ const FeaturedProducts = () => {
 
       <ButtonWrapper>
         <Button variant="outline" onClick={handleViewAll}>
-          Xem tất cả sản phẩm »
+          {FeaturedProductsData.VIEW_ALL_BTN}
         </Button>
       </ButtonWrapper>
     </SectionWrapper>

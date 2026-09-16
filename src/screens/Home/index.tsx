@@ -3,11 +3,11 @@
 import React from 'react';
 import { HomeWrapper } from './styles';
 import Carousel from '@/components/ui/Carousel';
-import FeaturedProducts from './components/FeaturedProducts';
-import FAQAndCommitments from './components/FAQAndCommitments';
-import NewsSection from './components/NewsSection';
-import TestimonialSection from './components/TestimonialSection';
-import PartnerLogos from './components/PartnerLogos';
+import FeaturedProducts from './section/FeaturedProducts';
+import FAQAndCommitments from './section/FAQAndCommitments';
+import NewsSection from './section/NewsSection';
+import TestimonialSection from './section/TestimonialSection';
+import PartnerLogos from './section/PartnerLogos';
 import { AssetManager } from '@/lib/AssetManager';
 
 const HomeScreen = () => {

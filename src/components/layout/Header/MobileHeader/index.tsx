@@ -25,6 +25,14 @@ import {
   MobileSubmenuLink,
 } from "./styles";
 
+const MobileHeaderData = {
+  LOGO_SRC: AssetManager.logo,
+  LOGO_ALT: "Tu Thanh Phat Logo",
+  MENU_ARIA_LABEL: "Toggle Menu",
+  SEARCH_LABEL: "Tìm kiếm",
+  SEARCH_PLACEHOLDER: "Tìm kiếm sản phẩm...",
+};
+
 export const MobileHeader = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,7 +57,7 @@ export const MobileHeader = () => {
         <div className="header-container">
           <MobileTopContent>
             <MobileLogo href="/">
-              <img src={AssetManager.logo} alt="Tu Thanh Phat Logo" />
+              <img src={MobileHeaderData.LOGO_SRC} alt={MobileHeaderData.LOGO_ALT} />
             </MobileLogo>
           </MobileTopContent>
         </div>
@@ -59,11 +67,8 @@ export const MobileHeader = () => {
       <MobileBottom>
         <div className="header-container">
           <MobileNavContainer>
-            <MobileIconBtn onClick={toggleMenu} aria-label="Toggle Menu">
+            <MobileIconBtn onClick={toggleMenu} aria-label={MobileHeaderData.MENU_ARIA_LABEL}>
               <Menu size={24} />
-            </MobileIconBtn>
-            <MobileIconBtn>
-              <Search size={20} />
             </MobileIconBtn>
           </MobileNavContainer>
         </div>
@@ -113,11 +118,54 @@ export const MobileHeader = () => {
                         </MobileSubmenuItem>
                       ))}
                     </MobileSubmenuList>
+                    
                   </MobileSubmenu>
                 )}
+                
               </MobileMenuItem>
             );
           })}
+          
+          <MobileMenuItem>
+            <MobileItemHeader>
+              <MobileMenuLink 
+                href="#"
+                $isActive={false}
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleSubmenu('search');
+                }}
+                style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+              >
+                <Search size={18} />
+                {MobileHeaderData.SEARCH_LABEL}
+              </MobileMenuLink>
+              <MobileToggleBtn
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleSubmenu('search');
+                }}
+              >
+                {expandedItem === 'search' ? <Minus size={16} /> : <Plus size={16} />}
+              </MobileToggleBtn>
+            </MobileItemHeader>
+            <MobileSubmenu $isOpen={expandedItem === 'search'}>
+              <MobileSubmenuList style={{ padding: '15px' }}>
+                <input 
+                  type="text" 
+                  placeholder={MobileHeaderData.SEARCH_PLACEHOLDER} 
+                  style={{ 
+                    width: '100%', 
+                    padding: '10px 15px', 
+                    borderRadius: '4px', 
+                    border: '1px solid #ddd',
+                    outline: 'none',
+                    fontSize: '14px'
+                  }} 
+                />
+              </MobileSubmenuList>
+            </MobileSubmenu>
+          </MobileMenuItem>
         </MobileMenuList>
       </MobileAccordion>
     </MobileHeaderWrapper>

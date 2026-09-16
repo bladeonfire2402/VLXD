@@ -45,6 +45,43 @@ import {
   RelatedGrid
 } from './styles';
 
+const ProductDetailData = {
+  SUCCESS_MSG: 'Đặt hàng thành công! Chúng tôi sẽ liên hệ lại sớm nhất.',
+  PRICE_CONTACT: 'Liên hệ',
+  DESC_PREFIX: 'Anh Tuấn luôn là địa chỉ cung cấp',
+  DESC_SUFFIX: 'của mọi công trình, nhận đơn đặt hàng theo hợp đồng, phân phối cho mọi công trình lớn nhỏ.',
+  BTN_CONTACT_ORDER: 'Liên hệ đặt hàng',
+  TAB_INFO: 'Thông tin sản phẩm',
+  TAB_ORDER: 'Đặt hàng',
+  COMPANY_INFO: {
+    NAME: 'MUA BÁN VẬT LIỆU XÂY DỰNG',
+    ADDRESS: 'Địa chỉ: 71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM',
+    TEL: 'Tel: 0909 553 750 - 0911 702 879',
+    EMAIL: 'Email: vlxdtanphu2026@gmail.com',
+    WEBSITE_URL: 'https://muabanvatlieuixaydung.com',
+    WEBSITE_TEXT: 'Website: muabanvatlieuxaydung.com'
+  },
+  TAGS_TITLE: 'Tags',
+  QUICK_CONTACT: {
+    TITLE: 'LIÊN HỆ NHANH',
+    CHAT: 'Chat online',
+    PHONE1: '0909 553 750',
+    PHONE2: '0911 702 879'
+  },
+  ORDER_FORM: {
+    TITLE: 'ĐẶT HÀNG ONLINE',
+    PLACEHOLDERS: {
+      NAME: 'Họ tên *',
+      PHONE: 'Điện thoại *',
+      EMAIL: 'Email',
+      MESSAGE: 'Lời nhắn *'
+    },
+    BTN_SUBMIT: 'Đặt hàng',
+    BTN_SUBMITTING: 'Đang gửi...'
+  },
+  RELATED_TITLE: 'SẢN PHẨM LIÊN QUAN'
+};
+
 interface ProductDetailPageProps {
   product: Product;
   relatedProducts: Product[];
@@ -60,7 +97,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
   const handleOrder = () => {
     setIsSubmitting(true);
     setTimeout(() => {
-      toast.success('Đặt hàng thành công! Chúng tôi sẽ liên hệ lại sớm nhất.');
+      toast.success(ProductDetailData.SUCCESS_MSG);
       setIsSubmitting(false);
     }, 800);
   };
@@ -91,13 +128,12 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
 
         <ProductInfo>
           <ProductName>{product.name}</ProductName>
-          <ProductPrice>{product.price || 'Liên hệ'}</ProductPrice>
+          <ProductPrice>{product.price || ProductDetailData.PRICE_CONTACT}</ProductPrice>
           <ProductDescription>
-            Anh Tuấn luôn là địa chỉ cung cấp {product.name.toLowerCase()} của mọi công trình,
-            nhận đơn đặt hàng theo hợp đồng, phân phối cho mọi công trình lớn nhỏ.
+            {ProductDetailData.DESC_PREFIX} {product.name.toLowerCase()} {ProductDetailData.DESC_SUFFIX}
           </ProductDescription>
           <ContactButton onClick={() => setActiveTab('order')}>
-            Liên hệ đặt hàng
+            {ProductDetailData.BTN_CONTACT_ORDER}
           </ContactButton>
         </ProductInfo>
       </HeroGrid>
@@ -106,10 +142,10 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
       <TabsWrapper>
         <TabsHeader>
           <TabButton $active={activeTab === 'info'} onClick={() => setActiveTab('info')}>
-            Thông tin sản phẩm
+            {ProductDetailData.TAB_INFO}
           </TabButton>
           <TabButton $active={activeTab === 'order'} onClick={() => setActiveTab('order')}>
-            Đặt hàng
+            {ProductDetailData.TAB_ORDER}
           </TabButton>
         </TabsHeader>
 
@@ -120,12 +156,12 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
             {/* Company Card */}
             <CompanyCard>
               <CompanyInfo>
-                <strong>MUA BÁN VẬT LIỆU XÂY DỰNG</strong>
-                <span>Địa chỉ: 71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM</span>
-                <span>Tel: 0909 553 750 - 0911 702 879</span>
-                <span>Email: vlxdtanphu2026@gmail.com</span>
-                <a href="https://muabanvatlieuixaydung.com" target="_blank" rel="noopener noreferrer">
-                  Website: muabanvatlieuxaydung.com
+                <strong>{ProductDetailData.COMPANY_INFO.NAME}</strong>
+                <span>{ProductDetailData.COMPANY_INFO.ADDRESS}</span>
+                <span>{ProductDetailData.COMPANY_INFO.TEL}</span>
+                <span>{ProductDetailData.COMPANY_INFO.EMAIL}</span>
+                <a href={ProductDetailData.COMPANY_INFO.WEBSITE_URL} target="_blank" rel="noopener noreferrer">
+                  {ProductDetailData.COMPANY_INFO.WEBSITE_TEXT}
                 </a>
               </CompanyInfo>
             </CompanyCard>
@@ -133,7 +169,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
             {/* Tags */}
             {product.tags.length > 0 && (
               <TagsSection>
-                <TagsTitle>Tags</TagsTitle>
+                <TagsTitle>{ProductDetailData.TAGS_TITLE}</TagsTitle>
                 <TagList>
                   {product.tags.map((tag, idx) => (
                     <Tag key={idx} href="#">{tag}</Tag>
@@ -149,48 +185,48 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
             <OrderGrid>
               {/* Left: Quick Contact */}
               <QuickContactSection>
-                <QuickContactTitle>LIÊN HỆ NHANH</QuickContactTitle>
+                <QuickContactTitle>{ProductDetailData.QUICK_CONTACT.TITLE}</QuickContactTitle>
                 <QuickContactItem>
                   <MessageCircle size={20} />
-                  <span>Chat online</span>
+                  <span>{ProductDetailData.QUICK_CONTACT.CHAT}</span>
                 </QuickContactItem>
                 <QuickContactItem>
                   <Phone size={20} />
-                  <span>0909 553 750</span>
+                  <span>{ProductDetailData.QUICK_CONTACT.PHONE1}</span>
                 </QuickContactItem>
                 <QuickContactItem>
                   <Mail size={20} />
-                  <span>0911 702 879</span>
+                  <span>{ProductDetailData.QUICK_CONTACT.PHONE2}</span>
                 </QuickContactItem>
               </QuickContactSection>
 
               {/* Right: Order Form */}
               <OrderFormSection>
-                <OrderFormTitle>ĐẶT HÀNG ONLINE</OrderFormTitle>
+                <OrderFormTitle>{ProductDetailData.ORDER_FORM.TITLE}</OrderFormTitle>
                 <OrderInputGroup>
                   <OrderInputIcon><User size={16} /></OrderInputIcon>
-                  <OrderInput type="text" placeholder="Họ tên *" />
+                  <OrderInput type="text" placeholder={ProductDetailData.ORDER_FORM.PLACEHOLDERS.NAME} />
                 </OrderInputGroup>
                 <OrderFormRow>
                   <OrderInputGroup>
                     <OrderInputIcon><Phone size={16} /></OrderInputIcon>
-                    <OrderInput type="text" placeholder="Điện thoại *" />
+                    <OrderInput type="text" placeholder={ProductDetailData.ORDER_FORM.PLACEHOLDERS.PHONE} />
                   </OrderInputGroup>
                   <OrderInputGroup>
                     <OrderInputIcon><Mail size={16} /></OrderInputIcon>
-                    <OrderInput type="email" placeholder="Email" />
+                    <OrderInput type="email" placeholder={ProductDetailData.ORDER_FORM.PLACEHOLDERS.EMAIL} />
                   </OrderInputGroup>
                 </OrderFormRow>
                 <OrderInputGroup>
                   <OrderInputIconTop><PenLine size={16} /></OrderInputIconTop>
-                  <OrderTextarea placeholder="Lời nhắn *" />
+                  <OrderTextarea placeholder={ProductDetailData.ORDER_FORM.PLACEHOLDERS.MESSAGE} />
                 </OrderInputGroup>
                 <OrderSubmitButton
                   type="button"
                   onClick={handleOrder}
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Đang gửi...' : 'Đặt hàng'}
+                  {isSubmitting ? ProductDetailData.ORDER_FORM.BTN_SUBMITTING : ProductDetailData.ORDER_FORM.BTN_SUBMIT}
                 </OrderSubmitButton>
               </OrderFormSection>
             </OrderGrid>
@@ -201,7 +237,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
       {/* ===== RELATED PRODUCTS ===== */}
       {relatedProducts.length > 0 && (
         <RelatedSection>
-          <SectionTitle title="SẢN PHẨM LIÊN QUAN" />
+          <SectionTitle title={ProductDetailData.RELATED_TITLE} />
           <RelatedGrid>
             {relatedProducts.map((rp) => (
               <ProductCard

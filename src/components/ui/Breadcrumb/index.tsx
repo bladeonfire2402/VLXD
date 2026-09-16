@@ -11,10 +11,18 @@ import {
   CurrentPage 
 } from './styles';
 
+const BreadcrumbData = {
+  HOME: 'Trang chủ',
+  PRODUCTS: 'Vật liệu xây dựng',
+  CONTACT: 'Liên hệ',
+  FALLBACK_PAGE: 'Trang',
+  SEPARATOR: '»'
+};
+
 // Static route mapping
 const staticRoutes: Record<string, string> = {
-  '/lien-he': 'Liên hệ',
-  '/san-pham': 'Vật liệu xây dựng',
+  '/lien-he': BreadcrumbData.CONTACT,
+  '/san-pham': BreadcrumbData.PRODUCTS,
 };
 
 const Breadcrumb = () => {
@@ -29,8 +37,8 @@ const Breadcrumb = () => {
     return (
       <BreadcrumbWrapper>
         <BreadcrumbContainer>
-          <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-          <Separator>»</Separator>
+          <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+          <Separator>{BreadcrumbData.SEPARATOR}</Separator>
           <CurrentPage>{staticRoutes[pathname]}</CurrentPage>
         </BreadcrumbContainer>
       </BreadcrumbWrapper>
@@ -49,10 +57,10 @@ const Breadcrumb = () => {
       return (
         <BreadcrumbWrapper>
           <BreadcrumbContainer>
-            <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-            <Separator>»</Separator>
-            <BreadcrumbLink href="/san-pham">Vật liệu xây dựng</BreadcrumbLink>
-            <Separator>»</Separator>
+            <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+            <Separator>{BreadcrumbData.SEPARATOR}</Separator>
+            <BreadcrumbLink href="/san-pham">{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
+            <Separator>{BreadcrumbData.SEPARATOR}</Separator>
             <CurrentPage>{categoryName}</CurrentPage>
           </BreadcrumbContainer>
         </BreadcrumbWrapper>
@@ -65,12 +73,12 @@ const Breadcrumb = () => {
       return (
         <BreadcrumbWrapper>
           <BreadcrumbContainer>
-            <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-            <Separator>»</Separator>
-            <BreadcrumbLink href="/san-pham">Vật liệu xây dựng</BreadcrumbLink>
-            <Separator>»</Separator>
+            <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+            <Separator>{BreadcrumbData.SEPARATOR}</Separator>
+            <BreadcrumbLink href="/san-pham">{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
+            <Separator>{BreadcrumbData.SEPARATOR}</Separator>
             <BreadcrumbLink href={`/san-pham/${categorySlug}`}>{categoryName}</BreadcrumbLink>
-            <Separator>»</Separator>
+            <Separator>{BreadcrumbData.SEPARATOR}</Separator>
             <CurrentPage>{product?.name || productSlug}</CurrentPage>
           </BreadcrumbContainer>
         </BreadcrumbWrapper>
@@ -79,12 +87,12 @@ const Breadcrumb = () => {
   }
 
   // Fallback
-  const fallbackName = pathname.split('/').pop()?.replace(/-/g, ' ') || 'Trang';
+  const fallbackName = pathname.split('/').pop()?.replace(/-/g, ' ') || BreadcrumbData.FALLBACK_PAGE;
   return (
     <BreadcrumbWrapper>
       <BreadcrumbContainer>
-        <BreadcrumbLink href="/">Trang chủ</BreadcrumbLink>
-        <Separator>»</Separator>
+        <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+        <Separator>{BreadcrumbData.SEPARATOR}</Separator>
         <CurrentPage>{fallbackName.charAt(0).toUpperCase() + fallbackName.slice(1)}</CurrentPage>
       </BreadcrumbContainer>
     </BreadcrumbWrapper>

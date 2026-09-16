@@ -29,6 +29,38 @@ import {
   CardArrow
 } from './styles';
 
+const NotFoundData = {
+  TOP_LABEL: 'LỖI 404 • KHÔNG TÌM THẤY TRANG',
+  HEADING: <>Có vẻ bạn đã<br/>rẽ nhầm đường.</>,
+  DESCRIPTION: 'Trang bạn đang tìm có thể đã được di chuyển, đổi tên hoặc không còn tồn tại. Hãy để chúng tôi đưa bạn về đúng nơi.',
+  BTN_HOME: 'Về trang chủ',
+  BTN_PRODUCTS: 'Xem vật liệu',
+  SUPPORT_TEXT: 'Cần hỗ trợ? ',
+  SUPPORT_LINK: 'Liên hệ với chúng tôi',
+  ILLUSTRATION_CAPTION: '404 / PAGE NOT FOUND',
+  EXPLORE_TITLE: 'TIẾP TỤC KHÁM PHÁ',
+  EXPLORE_ITEMS: [
+    {
+      title: 'Đá xây dựng',
+      desc: 'Vững chắc từ nền móng',
+      url: '/san-pham/da-xay-dung',
+      icon: Layers
+    },
+    {
+      title: 'Cát xây dựng',
+      desc: 'Cho từng hạng mục công trình',
+      url: '/san-pham/cat-xay-dung',
+      icon: Mountain
+    },
+    {
+      title: 'Bê tông thương phẩm',
+      desc: 'Kết nối mọi kết cấu',
+      url: '/san-pham/be-tong',
+      icon: Box
+    }
+  ]
+};
+
 export default function NotFoundView() {
   const router = useRouter();
 
@@ -37,28 +69,28 @@ export default function NotFoundView() {
       <MainContent>
         <LeftColumn>
           <TopLabel>
-            LỖI 404 &bull; KHÔNG TÌM THẤY TRANG
+            {NotFoundData.TOP_LABEL}
           </TopLabel>
           
-          <Heading>Có vẻ bạn đã<br/>rẽ nhầm đường.</Heading>
+          <Heading>{NotFoundData.HEADING}</Heading>
           
           <Description>
-            Trang bạn đang tìm có thể đã được di chuyển, đổi tên hoặc không còn tồn tại. Hãy để chúng tôi đưa bạn về đúng nơi.
+            {NotFoundData.DESCRIPTION}
           </Description>
           
           <ButtonGroup>
             <Button variant="solid" onClick={() => router.push('/')}>
               <ArrowLeft size={18} style={{ marginRight: '8px' }} />
-              Về trang chủ
+              {NotFoundData.BTN_HOME}
             </Button>
             <Button variant="outline" onClick={() => router.push('/san-pham')}>
-              Xem vật liệu
+              {NotFoundData.BTN_PRODUCTS}
               <ArrowUpRight size={18} style={{ marginLeft: '8px' }} />
             </Button>
           </ButtonGroup>
           
           <SupportText>
-            Cần hỗ trợ? <span className="link" onClick={() => router.push('/lien-he')}>Liên hệ với chúng tôi</span>
+            {NotFoundData.SUPPORT_TEXT} <span className="link" onClick={() => router.push('/lien-he')}>{NotFoundData.SUPPORT_LINK}</span>
           </SupportText>
         </LeftColumn>
 
@@ -78,44 +110,31 @@ export default function NotFoundView() {
               <div className="barrier-leg right"></div>
             </IllustrationBarrier>
             
-            <div className="caption">404 / PAGE NOT FOUND</div>
+            <div className="caption">{NotFoundData.ILLUSTRATION_CAPTION}</div>
           </Illustration404>
         </RightColumn>
       </MainContent>
 
       <BottomSection>
         <SectionDivider>
-          <SectionTitle>TIẾP TỤC KHÁM PHÁ</SectionTitle>
+          <SectionTitle>{NotFoundData.EXPLORE_TITLE}</SectionTitle>
           <div className="line"></div>
         </SectionDivider>
         
         <ExploreGrid>
-          <ExploreCard onClick={() => router.push('/san-pham/da-xay-dung')}>
-            <CardIcon><Layers size={24} /></CardIcon>
-            <CardContent>
-              <CardTitle>Đá xây dựng</CardTitle>
-              <CardDesc>Vững chắc từ nền móng</CardDesc>
-            </CardContent>
-            <CardArrow><ArrowUpRight size={20} /></CardArrow>
-          </ExploreCard>
-
-          <ExploreCard onClick={() => router.push('/san-pham/cat-xay-dung')}>
-            <CardIcon><Mountain size={24} /></CardIcon>
-            <CardContent>
-              <CardTitle>Cát xây dựng</CardTitle>
-              <CardDesc>Cho từng hạng mục công trình</CardDesc>
-            </CardContent>
-            <CardArrow><ArrowUpRight size={20} /></CardArrow>
-          </ExploreCard>
-
-          <ExploreCard onClick={() => router.push('/san-pham/be-tong')}>
-            <CardIcon><Box size={24} /></CardIcon>
-            <CardContent>
-              <CardTitle>Bê tông thương phẩm</CardTitle>
-              <CardDesc>Kết nối mọi kết cấu</CardDesc>
-            </CardContent>
-            <CardArrow><ArrowUpRight size={20} /></CardArrow>
-          </ExploreCard>
+          {NotFoundData.EXPLORE_ITEMS.map((item, index) => {
+            const IconComponent = item.icon;
+            return (
+              <ExploreCard key={index} onClick={() => router.push(item.url)}>
+                <CardIcon><IconComponent size={24} /></CardIcon>
+                <CardContent>
+                  <CardTitle>{item.title}</CardTitle>
+                  <CardDesc>{item.desc}</CardDesc>
+                </CardContent>
+                <CardArrow><ArrowUpRight size={20} /></CardArrow>
+              </ExploreCard>
+            );
+          })}
         </ExploreGrid>
       </BottomSection>
     </NotFoundContainer>

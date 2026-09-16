@@ -1,5 +1,5 @@
 import { findProductBySlug, getRelatedProducts, CATEGORY_MAP } from '@/lib/constants';
-import ProductDetailPage from '@/views/ProductDetail';
+import ProductDetailPage from '@/screens/ProductDetail';
 import { notFound } from 'next/navigation';
 
 interface PageProps {

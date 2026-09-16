@@ -1,6 +1,6 @@
 export class AssetManager {
   static get logo() {
-    return '/images/logo.png';
+    return '/images/branding/logo-with-slogan.png';
   }
 
   static get banners() {

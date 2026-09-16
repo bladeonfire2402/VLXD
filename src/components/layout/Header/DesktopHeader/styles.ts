@@ -117,10 +117,37 @@ export const DesktopNavLink = styled(Link)<{ $isActive?: boolean }>`
   }
 `;
 
-export const DesktopSearch = styled.div`
+export const DesktopSearchWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 0 15px;
+`;
+
+export const DesktopSearchInputContainer = styled.div<{ $isOpen: boolean }>`
+  width: ${({ $isOpen }) => ($isOpen ? "250px" : "0")};
+  opacity: ${({ $isOpen }) => ($isOpen ? "1" : "0")};
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-right: ${({ $isOpen }) => ($isOpen ? "10px" : "0")};
+`;
+
+export const DesktopSearchInput = styled.input`
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  
+  &:focus {
+    border-color: var(--color-nav-active, #D79B4B);
+  }
+`;
+
+export const DesktopSearchIconBtn = styled.div`
+  display: flex;
+  align-items: center;
   color: #ffffff;
   cursor: pointer;
   transition: color 0.2s;

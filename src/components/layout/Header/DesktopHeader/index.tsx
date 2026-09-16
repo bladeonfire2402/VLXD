@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Search, ChevronDown } from "lucide-react";
 import { AssetManager } from "@/lib/AssetManager";
@@ -23,19 +24,25 @@ import {
   DesktopDropdownList,
   DesktopDropdownItem,
   DesktopDropdownLink,
-  DesktopSearch,
+  DesktopSearchWrapper,
+  DesktopSearchInputContainer,
+  DesktopSearchInput,
+  DesktopSearchIconBtn,
 } from "./styles";
 
-const content = {
-  logo: AssetManager.logo,
-  address: "251,",
-  hotline: "0909 553 750",
-  addressTitle: "Địa chỉ",
-  hotlineTitle: "Hotline",
+const DesktopHeaderData = {
+  LOGO_SRC: AssetManager.logo,
+  LOGO_ALT: "Tu Thanh Phat Logo",
+  ADDRESS: "251,",
+  HOTLINE: "0909 553 750",
+  ADDRESS_TITLE: "Địa chỉ",
+  HOTLINE_TITLE: "Hotline",
+  SEARCH_PLACEHOLDER: "Tìm kiếm sản phẩm...",
 };
 
 export const DesktopHeader = () => {
   const pathname = usePathname();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <>
@@ -44,7 +51,7 @@ export const DesktopHeader = () => {
         <div className="header-container">
           <DesktopTopContent>
             <DesktopLogo href="/">
-              <img src={content.logo} alt="Tu Thanh Phat Logo" />
+              <img src={DesktopHeaderData.LOGO_SRC} alt={DesktopHeaderData.LOGO_ALT} />
             </DesktopLogo>
 
             <DesktopInfo>
@@ -53,8 +60,8 @@ export const DesktopHeader = () => {
                   <MapPin size={24} />
                 </InfoIcon>
                 <InfoText>
-                  <InfoLabel>{content.addressTitle}</InfoLabel>
-                  <InfoValue>{content.address}</InfoValue>
+                  <InfoLabel>{DesktopHeaderData.ADDRESS_TITLE}</InfoLabel>
+                  <InfoValue>{DesktopHeaderData.ADDRESS}</InfoValue>
                 </InfoText>
               </InfoItem>
 
@@ -63,8 +70,8 @@ export const DesktopHeader = () => {
                   <Phone size={24} />
                 </InfoIcon>
                 <InfoText>
-                  <InfoLabel>{content.hotlineTitle}</InfoLabel>
-                  <InfoValue>{content.hotline}</InfoValue>
+                  <InfoLabel>{DesktopHeaderData.HOTLINE_TITLE}</InfoLabel>
+                  <InfoValue>{DesktopHeaderData.HOTLINE}</InfoValue>
                 </InfoText>
               </InfoItem>
             </DesktopInfo>
@@ -108,9 +115,17 @@ export const DesktopHeader = () => {
               })}
             </DesktopNavList>
 
-            <DesktopSearch>
-              <Search size={20} />
-            </DesktopSearch>
+            <DesktopSearchWrapper>
+              <DesktopSearchInputContainer $isOpen={isSearchOpen}>
+                <DesktopSearchInput 
+                  type="text" 
+                  placeholder={DesktopHeaderData.SEARCH_PLACEHOLDER}
+                />
+              </DesktopSearchInputContainer>
+              <DesktopSearchIconBtn onClick={() => setIsSearchOpen(!isSearchOpen)}>
+                <Search size={20} />
+              </DesktopSearchIconBtn>
+            </DesktopSearchWrapper>
           </DesktopNavContainer>
         </div>
       </DesktopBottom>
