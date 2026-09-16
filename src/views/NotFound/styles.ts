@@ -4,12 +4,10 @@ export const NotFoundContainer = styled.div`
   max-width: var(--container-width, 1200px);
   margin: 0 auto;
   padding: 40px 20px 80px;
-  background-color: var(--color-bg-main, #F7F7F5);
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: var(--font-family-base, 'Inter', sans-serif);
 `;
 
 export const MainContent = styled.div`
@@ -42,7 +40,7 @@ export const TopLabel = styled.div`
   align-items: center;
   font-size: 12px;
   font-weight: 700;
-  color: var(--color-primary, #B86B32);
+  color: var(--color-accent);
   letter-spacing: 1px;
   margin-bottom: 24px;
   text-transform: uppercase;
@@ -50,7 +48,6 @@ export const TopLabel = styled.div`
   .line {
     width: 32px;
     height: 2px;
-    background-color: var(--color-primary, #B86B32);
     margin-right: 12px;
   }
 `;
@@ -59,7 +56,7 @@ export const Heading = styled.h1`
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--color-text-main, #202426);
+  color: #202426;
   margin-bottom: 24px;
   letter-spacing: -1px;
 
@@ -91,14 +88,14 @@ export const SupportText = styled.p`
   color: var(--color-text-muted, #687176);
 
   .link {
-    color: var(--color-text-main, #202426);
+    color: #202426;
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
     transition: color 0.2s;
 
     &:hover {
-      color: var(--color-primary, #B86B32);
+      color: var(--color-accent);
     }
   }
 `;
@@ -154,12 +151,12 @@ export const IllustrationNumber = styled.div`
   .digit {
     font-size: 160px;
     font-weight: 900;
-    color: var(--color-text-main, #202426);
+    color: #202426;
     line-height: 1;
     text-shadow: 4px 4px 0px rgba(0,0,0,0.05);
 
     &.zero {
-      color: var(--color-primary, #B86B32);
+      color: var(--color-accent, #B86B32);
     }
 
     @media (max-width: 768px) {
@@ -255,7 +252,7 @@ export const CardIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-primary, #B86B32);
+  color: var(--color-accent, #B86B32);
   background-color: rgba(184, 107, 50, 0.1);
   border-radius: 8px;
   margin-right: 16px;
@@ -269,7 +266,7 @@ export const CardContent = styled.div`
 export const CardTitle = styled.h3`
   font-size: 16px;
   font-weight: 700;
-  color: var(--color-text-main, #202426);
+  color: var(--color-accent, #202426);
   margin: 0 0 4px 0;
 `;
 

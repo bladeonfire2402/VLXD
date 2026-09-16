@@ -37,7 +37,6 @@ export default function NotFoundView() {
       <MainContent>
         <LeftColumn>
           <TopLabel>
-            <span className="line"></span>
             LỖI 404 &bull; KHÔNG TÌM THẤY TRANG
           </TopLabel>
           
