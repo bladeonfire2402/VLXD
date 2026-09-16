@@ -13,7 +13,7 @@ import { SocialMediaBar } from "@/components/layout/social-media-bar";
 const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "Vật Liệu Xây Dựng",
+  title: "VLXD - Anh Tuấn",
   description: "Hệ thống phân phối vật liệu xây dựng uy tín",
 };
 

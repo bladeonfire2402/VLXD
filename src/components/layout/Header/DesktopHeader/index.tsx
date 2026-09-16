@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { MapPin, Phone, Search, ChevronDown } from "lucide-react";
 import { AssetManager } from "@/lib/AssetManager";
 import { MENU_ITEMS } from "@/lib/constants";
@@ -43,7 +43,16 @@ const DesktopHeaderData = {
 
 export const DesktopHeader = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchQuery.trim()) {
+      router.push(`${RouteManager.SEARCH}?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsSearchOpen(false);
+    }
+  };
 
   return (
     <>
@@ -121,9 +130,19 @@ export const DesktopHeader = () => {
                 <DesktopSearchInput
                   type="text"
                   placeholder={DesktopHeaderData.SEARCH_PLACEHOLDER}
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={handleSearch}
                 />
               </DesktopSearchInputContainer>
-              <DesktopSearchIconBtn onClick={() => setIsSearchOpen(!isSearchOpen)}>
+              <DesktopSearchIconBtn onClick={() => {
+                if (isSearchOpen && searchQuery.trim()) {
+                  router.push(`${RouteManager.SEARCH}?q=${encodeURIComponent(searchQuery.trim())}`);
+                  setIsSearchOpen(false);
+                } else {
+                  setIsSearchOpen(!isSearchOpen);
+                }
+              }}>
                 <Search size={20} />
               </DesktopSearchIconBtn>
             </DesktopSearchWrapper>

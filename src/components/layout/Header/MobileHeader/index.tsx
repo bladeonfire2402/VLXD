@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Search, Menu, Plus, Minus } from "lucide-react";
 import { AssetManager } from "@/lib/AssetManager";
 import { MENU_ITEMS } from "@/lib/constants";
@@ -36,8 +36,18 @@ const MobileHeaderData = {
 
 export const MobileHeader = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchQuery.trim()) {
+      router.push(`${RouteManager.SEARCH}?q=${encodeURIComponent(searchQuery.trim())}`);
+      setIsMenuOpen(false);
+      setExpandedItem(null);
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -155,6 +165,9 @@ export const MobileHeader = () => {
                 <input 
                   type="text" 
                   placeholder={MobileHeaderData.SEARCH_PLACEHOLDER} 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={handleSearch}
                   style={{ 
                     width: '100%', 
                     padding: '10px 15px', 

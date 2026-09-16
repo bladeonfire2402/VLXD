@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SectionTitleContainer = styled.div`
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const Title = styled.h2`
@@ -21,7 +21,7 @@ export const Divider = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 12px 0 16px;
+  margin-bottom: 20px;
   
   &::before,
   &::after {

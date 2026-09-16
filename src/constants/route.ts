@@ -3,6 +3,7 @@ export const RouteManager = {
   PRODUCTS: '/san-pham',
   CONTACT: '/lien-he',
   NEWS: '/tin-tuc',
+  SEARCH: '/tim-kiem',
   
   // Dynamic routes
   productCategory: (category: string) => `/san-pham/${category}`,

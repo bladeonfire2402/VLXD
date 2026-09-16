@@ -16,6 +16,7 @@ html, body {
   font-family: var(--font-family-base);
   background-color: var(--color-bg-main);
   line-height: 1.5;
+  text-align: justify;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
