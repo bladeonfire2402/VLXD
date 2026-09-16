@@ -1,16 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import { AssetManager } from '@/lib/AssetManager';
+import { RouteManager } from '@/constants/route';
 
 const FooterData = {
   LOGO_ALT: 'VLXD Anh Tuấn Logo',
   DESCRIPTION: 'Đơn vị phân phối vật liệu xây dựng uy tín tại Bình Dương và các khu vực lân cận. Chúng tôi cam kết cung cấp sản phẩm chất lượng, có nguồn gốc rõ ràng với mức giá cạnh tranh, báo giá minh bạch và dịch vụ giao hàng tận nơi nhanh chóng, đúng tiến độ.',
   QUICK_LINKS_TITLE: 'Liên Kết Nhanh',
   QUICK_LINKS: [
-    { label: 'Trang chủ', href: '/' },
-    { label: 'Sản phẩm', href: '/san-pham' },
+    { label: 'Trang chủ', href: RouteManager.HOME },
+    { label: 'Sản phẩm', href: RouteManager.PRODUCTS },
     { label: 'Chính sách & Quy định', href: '/info' },
-    { label: 'Liên hệ', href: '/lien-he' },
+    { label: 'Liên hệ', href: RouteManager.CONTACT },
   ],
   CONTACT_TITLE: 'Thông Tin Liên Hệ',
   CONTACT_INFO: [

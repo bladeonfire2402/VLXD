@@ -4,8 +4,9 @@ import React from 'react';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
 import Button from '@/components/ui/Button';
-import { MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
 import { useRouter } from 'next/navigation';
+import { RouteManager } from '@/constants/route';
+import { MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
 import { SectionWrapper, GridContainer, ButtonWrapper } from './styles';
 
 const FeaturedProductsData = {
@@ -18,7 +19,7 @@ const FeaturedProducts = () => {
   const router = useRouter();
   
   const handleViewAll = () => {
-    router.push('/san-pham');
+    router.push(RouteManager.PRODUCTS);
   };
 
   return (

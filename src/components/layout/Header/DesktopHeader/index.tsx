@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { MapPin, Phone, Search, ChevronDown } from "lucide-react";
 import { AssetManager } from "@/lib/AssetManager";
 import { MENU_ITEMS } from "@/lib/constants";
+import { RouteManager } from "@/constants/route";
 import {
   DesktopTop,
   DesktopTopContent,
@@ -50,7 +51,7 @@ export const DesktopHeader = () => {
       <DesktopTop>
         <div className="header-container">
           <DesktopTopContent>
-            <DesktopLogo href="/">
+            <DesktopLogo href={RouteManager.HOME}>
               <img src={DesktopHeaderData.LOGO_SRC} alt={DesktopHeaderData.LOGO_ALT} />
             </DesktopLogo>
 

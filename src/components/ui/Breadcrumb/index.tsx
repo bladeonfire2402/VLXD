@@ -3,6 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { CATEGORY_MAP, findProductBySlug } from '@/lib/constants';
+import { RouteManager } from '@/constants/route';
 import { 
   BreadcrumbWrapper, 
   BreadcrumbContainer, 
@@ -21,8 +22,8 @@ const BreadcrumbData = {
 
 // Static route mapping
 const staticRoutes: Record<string, string> = {
-  '/lien-he': BreadcrumbData.CONTACT,
-  '/san-pham': BreadcrumbData.PRODUCTS,
+  [RouteManager.CONTACT]: BreadcrumbData.CONTACT,
+  [RouteManager.PRODUCTS]: BreadcrumbData.PRODUCTS,
 };
 
 const Breadcrumb = () => {
@@ -37,7 +38,7 @@ const Breadcrumb = () => {
     return (
       <BreadcrumbWrapper>
         <BreadcrumbContainer>
-          <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+          <BreadcrumbLink href={RouteManager.HOME}>{BreadcrumbData.HOME}</BreadcrumbLink>
           <Separator>{BreadcrumbData.SEPARATOR}</Separator>
           <CurrentPage>{staticRoutes[pathname]}</CurrentPage>
         </BreadcrumbContainer>
@@ -57,9 +58,9 @@ const Breadcrumb = () => {
       return (
         <BreadcrumbWrapper>
           <BreadcrumbContainer>
-            <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+            <BreadcrumbLink href={RouteManager.HOME}>{BreadcrumbData.HOME}</BreadcrumbLink>
             <Separator>{BreadcrumbData.SEPARATOR}</Separator>
-            <BreadcrumbLink href="/san-pham">{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
+            <BreadcrumbLink href={RouteManager.PRODUCTS}>{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
             <Separator>{BreadcrumbData.SEPARATOR}</Separator>
             <CurrentPage>{categoryName}</CurrentPage>
           </BreadcrumbContainer>
@@ -73,11 +74,11 @@ const Breadcrumb = () => {
       return (
         <BreadcrumbWrapper>
           <BreadcrumbContainer>
-            <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+            <BreadcrumbLink href={RouteManager.HOME}>{BreadcrumbData.HOME}</BreadcrumbLink>
             <Separator>{BreadcrumbData.SEPARATOR}</Separator>
-            <BreadcrumbLink href="/san-pham">{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
+            <BreadcrumbLink href={RouteManager.PRODUCTS}>{BreadcrumbData.PRODUCTS}</BreadcrumbLink>
             <Separator>{BreadcrumbData.SEPARATOR}</Separator>
-            <BreadcrumbLink href={`/san-pham/${categorySlug}`}>{categoryName}</BreadcrumbLink>
+            <BreadcrumbLink href={RouteManager.productCategory(categorySlug)}>{categoryName}</BreadcrumbLink>
             <Separator>{BreadcrumbData.SEPARATOR}</Separator>
             <CurrentPage>{product?.name || productSlug}</CurrentPage>
           </BreadcrumbContainer>
@@ -91,7 +92,7 @@ const Breadcrumb = () => {
   return (
     <BreadcrumbWrapper>
       <BreadcrumbContainer>
-        <BreadcrumbLink href="/">{BreadcrumbData.HOME}</BreadcrumbLink>
+        <BreadcrumbLink href={RouteManager.HOME}>{BreadcrumbData.HOME}</BreadcrumbLink>
         <Separator>{BreadcrumbData.SEPARATOR}</Separator>
         <CurrentPage>{fallbackName.charAt(0).toUpperCase() + fallbackName.slice(1)}</CurrentPage>
       </BreadcrumbContainer>

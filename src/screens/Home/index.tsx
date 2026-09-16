@@ -1,6 +1,5 @@
 "use client";
 
-import React from 'react';
 import { HomeWrapper } from './styles';
 import Carousel from '@/components/ui/Carousel';
 import FeaturedProducts from './section/FeaturedProducts';

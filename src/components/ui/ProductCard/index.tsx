@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Product } from '@/types/product';
+import { RouteManager } from '@/constants/route';
 import {
   CardWrapper,
   ImageContainer,
@@ -18,7 +19,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClickAction }) => {
   return (
-    <Link href={`/san-pham/${product.categorySlug}/${product.slug}`} style={{ textDecoration: 'none' }}>
+    <Link href={RouteManager.productDetail(product.categorySlug, product.slug)} style={{ textDecoration: 'none' }}>
       <CardWrapper>
         <ImageContainer>
           <ProductImage src={product.thumbnail} alt={product.name} loading="lazy" />

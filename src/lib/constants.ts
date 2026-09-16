@@ -1,19 +1,21 @@
+import { RouteManager } from '@/constants/route';
+
 export const MENU_ITEMS = [
-  { label: 'TRANG CHỦ', url: '/' },
+  { label: 'TRANG CHỦ', url: RouteManager.HOME },
   { 
     label: 'VẬT LIỆU XÂY DỰNG', 
-    url: '/san-pham',
+    url: RouteManager.PRODUCTS,
     children: [
-      { label: 'Sắt thép xây dựng', url: '/san-pham/sat-thep-xay-dung' },
-      { label: 'Xi măng', url: '/san-pham/xi-mang' },
-      { label: 'Gạch tuynel', url: '/san-pham/gach-tuynel' },
-      { label: 'Cát xây dựng', url: '/san-pham/cat-xay-dung' },
-      { label: 'Đá xây dựng', url: '/san-pham/da-xay-dung' },
-      { label: 'Vật liệu xây dựng khác', url: '/san-pham/vat-lieu-xay-dung-khac' },
+      { label: 'Sắt thép xây dựng', url: RouteManager.productCategory('sat-thep-xay-dung') },
+      { label: 'Xi măng', url: RouteManager.productCategory('xi-mang') },
+      { label: 'Gạch tuynel', url: RouteManager.productCategory('gach-tuynel') },
+      { label: 'Cát xây dựng', url: RouteManager.productCategory('cat-xay-dung') },
+      { label: 'Đá xây dựng', url: RouteManager.productCategory('da-xay-dung') },
+      { label: 'Vật liệu xây dựng khác', url: RouteManager.productCategory('vat-lieu-xay-dung-khac') },
     ]
   },
-  { label: 'TIN TỨC', url: '/tin-tuc' },
-  { label: 'LIÊN HỆ', url: '/lien-he' },
+  { label: 'TIN TỨC', url: RouteManager.NEWS },
+  { label: 'LIÊN HỆ', url: RouteManager.CONTACT },
 ];
 
 import { Product } from '@/types/product';

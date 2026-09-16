@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   SectionWrapper,
   MarqueeContainer,
@@ -8,29 +7,29 @@ import {
 } from './styles';
 
 const PARTNER_LOGOS = [
-  { id: 1, name: 'Bosch', url: '/temp.png' },
-  { id: 2, name: 'Makita', url: '/temp.png' },
-  { id: 3, name: 'Sony', url: '/temp.png' },
-  { id: 4, name: 'Panasonic', url: '/temp.png' },
-  { id: 5, name: 'LG', url: '/temp.png' },
-  { id: 6, name: 'Samsung', url: '/temp.png' },
-  { id: 7, name: 'Siemens', url: '/temp.png' },
+  { id: 1, name: 'Thái Bình Dương', url: '/images/partners/thai-binh-duong.png' },
+  { id: 2, name: 'QH', url: '/images/partners/qh.png' },
+  { id: 3, name: 'Yên Lê', url: '/images/partners/yen-le.png' },
+  { id: 4, name: 'Lâm Trường Phát', url: '/images/partners/lam-truong-phat.png' },
+  { id: 5, name: 'Thành Danh', url: '/images/partners/thanh-danh.png' },
 ];
 
 const PartnerLogos = () => {
+  const repeatedLogos = [...PARTNER_LOGOS, ...PARTNER_LOGOS, ...PARTNER_LOGOS, ...PARTNER_LOGOS];
+
   return (
     <SectionWrapper>
       <MarqueeContainer>
         <MarqueeTrack>
           {/* First set of logos */}
-          {PARTNER_LOGOS.map((logo) => (
-            <LogoWrapper key={`set1-${logo.id}`}>
+          {repeatedLogos.map((logo, index) => (
+            <LogoWrapper key={`set1-${logo.id}-${index}`}>
               <LogoImage src={logo.url} alt={logo.name} loading="lazy" />
             </LogoWrapper>
           ))}
           {/* Second set of logos (duplicated for seamless looping) */}
-          {PARTNER_LOGOS.map((logo) => (
-            <LogoWrapper key={`set2-${logo.id}`}>
+          {repeatedLogos.map((logo, index) => (
+            <LogoWrapper key={`set2-${logo.id}-${index}`}>
               <LogoImage src={logo.url} alt={logo.name} loading="lazy" />
             </LogoWrapper>
           ))}

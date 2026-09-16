@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Search, Menu, Plus, Minus } from "lucide-react";
 import { AssetManager } from "@/lib/AssetManager";
 import { MENU_ITEMS } from "@/lib/constants";
+import { RouteManager } from "@/constants/route";
 import {
   MobileHeaderWrapper,
   MobileTop,
@@ -56,7 +57,7 @@ export const MobileHeader = () => {
       <MobileTop>
         <div className="header-container">
           <MobileTopContent>
-            <MobileLogo href="/">
+            <MobileLogo href={RouteManager.HOME}>
               <img src={MobileHeaderData.LOGO_SRC} alt={MobileHeaderData.LOGO_ALT} />
             </MobileLogo>
           </MobileTopContent>

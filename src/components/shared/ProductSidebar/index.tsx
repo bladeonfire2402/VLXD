@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { CATEGORY_MAP, MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
+import { RouteManager } from '@/constants/route';
 import {
   SidebarWrapper,
   SidebarSection,
@@ -59,10 +60,10 @@ const SidebarSectionTitle = ({ title }: { title: string }) => (
 // Build categories from CATEGORY_MAP
 const getCategoryItems = () => {
   return [
-    { label: ProductSidebarData.ALL_PRODUCTS_LABEL, url: '/san-pham' },
+    { label: ProductSidebarData.ALL_PRODUCTS_LABEL, url: RouteManager.PRODUCTS },
     ...Object.entries(CATEGORY_MAP).map(([slug, name]) => ({
       label: name,
-      url: `/san-pham/${slug}`,
+      url: RouteManager.productCategory(slug),
     })),
   ];
 };
@@ -79,7 +80,7 @@ const ProductSidebar = () => {
         <SidebarSectionTitle title={ProductSidebarData.TITLE_CATEGORY} />
         <CategoryList>
           {categories.map((cat) => (
-            <CategoryItem key={cat.url} $active={cat.url === '/san-pham' ? pathname === cat.url : pathname?.startsWith(cat.url) || false}>
+            <CategoryItem key={cat.url} $active={cat.url === RouteManager.PRODUCTS ? pathname === cat.url : pathname?.startsWith(cat.url) || false}>
               <Link href={cat.url}>{cat.label}</Link>
             </CategoryItem>
           ))}
@@ -111,7 +112,7 @@ const ProductSidebar = () => {
       <SidebarSection>
         <SidebarSectionTitle title={ProductSidebarData.TITLE_FEATURED} />
         {MOCK_FEATURED_PRODUCTS.slice(0, 4).map((product) => (
-          <FeaturedProductItem key={product.id} href={`/san-pham/${product.categorySlug}/${product.slug}`}>
+          <FeaturedProductItem key={product.id} href={RouteManager.productDetail(product.categorySlug, product.slug)}>
             <FeaturedProductImage src={product.thumbnail} alt={product.name} loading="lazy" />
             <FeaturedProductInfo>
               <FeaturedProductName>{product.name}</FeaturedProductName>

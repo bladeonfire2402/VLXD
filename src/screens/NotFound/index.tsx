@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, Layers, Mountain, Box } from 'lucide-react';
 import Button from '../../components/ui/Button';
+import { RouteManager } from '@/constants/route';
 import {
   NotFoundContainer,
   MainContent,
@@ -43,19 +44,19 @@ const NotFoundData = {
     {
       title: 'Đá xây dựng',
       desc: 'Vững chắc từ nền móng',
-      url: '/san-pham/da-xay-dung',
+      url: RouteManager.productCategory('da-xay-dung'),
       icon: Layers
     },
     {
       title: 'Cát xây dựng',
       desc: 'Cho từng hạng mục công trình',
-      url: '/san-pham/cat-xay-dung',
+      url: RouteManager.productCategory('cat-xay-dung'),
       icon: Mountain
     },
     {
       title: 'Bê tông thương phẩm',
       desc: 'Kết nối mọi kết cấu',
-      url: '/san-pham/be-tong',
+      url: RouteManager.productCategory('be-tong'),
       icon: Box
     }
   ]
@@ -79,18 +80,18 @@ export default function NotFoundView() {
           </Description>
           
           <ButtonGroup>
-            <Button variant="solid" onClick={() => router.push('/')}>
+            <Button variant="solid" onClick={() => router.push(RouteManager.HOME)}>
               <ArrowLeft size={18} style={{ marginRight: '8px' }} />
               {NotFoundData.BTN_HOME}
             </Button>
-            <Button variant="outline" onClick={() => router.push('/san-pham')}>
+            <Button variant="outline" onClick={() => router.push(RouteManager.PRODUCTS)}>
               {NotFoundData.BTN_PRODUCTS}
               <ArrowUpRight size={18} style={{ marginLeft: '8px' }} />
             </Button>
           </ButtonGroup>
           
           <SupportText>
-            {NotFoundData.SUPPORT_TEXT} <span className="link" onClick={() => router.push('/lien-he')}>{NotFoundData.SUPPORT_LINK}</span>
+            {NotFoundData.SUPPORT_TEXT} <span className="link" onClick={() => router.push(RouteManager.CONTACT)}>{NotFoundData.SUPPORT_LINK}</span>
           </SupportText>
         </LeftColumn>
 
