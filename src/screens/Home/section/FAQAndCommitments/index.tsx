@@ -15,31 +15,31 @@ import {
 
 
 const FAQAndCommitmentsData = {
-  COMMITMENTSTITLE: 'Anh Tuấn CAM KẾT GÌ?',
-  FOOTERTEXT: 'Mang đến cho khách hàng sự hài lòng về chất lượng với giá thành tốt nhất!',
+  COMMITMENTSTITLE: 'ANH TUẤN CAM KẾT',
+  FOOTERTEXT: 'Anh Tuấn – Chất lượng đúng cam kết, giá trị bền vững cho mọi công trình.',
   FAQs: [
     {
-      title: 'Anh Tuấn HOẠT ĐỘNG TỪ KHI NÀO?',
-      content: 'Công ty TNHH SX-TM-DV Anh Tuấn được thành lập vào tháng 01 năm 2008. Đây là thời kỳ ngành xây dựng Việt Nam có nhiều biến động và ngành vật liệu xây dựng gặp rất nhiều khó khăn. Mãi đến tháng 01 năm 2010, Anh Tuấn mới chính thức được khách hàng ghi nhận là nhà phân phối sắt thép xây dựng hàng đầu ở TP.Hồ Chí Minh và khu vực lân cận.',
+      title: 'Anh Tuấn hoạt động từ khi nào?',
+      content: 'Công ty TNHH SX-TM-DV Anh Tuấn chính thức đi vào hoạt động từ năm 2021, chuyên cung cấp và phân phối các sản phẩm sắt thép xây dựng tại Bình Dương và các khu vực lân cận. Với phương châm lấy chất lượng sản phẩm, uy tín và sự hài lòng của khách hàng làm nền tảng phát triển, Anh Tuấn không ngừng nâng cao năng lực phục vụ, từng bước khẳng định vị thế và trở thành đối tác tin cậy của khách hàng trong lĩnh vực vật liệu xây dựng.',
       isOpen: true
     },
     {
-      title: 'PHƯƠNG CHÂM HOẠT ĐỘNG.',
-      content: 'Chúng tôi luôn đặt lợi ích và sự hài lòng của khách hàng lên hàng đầu. Với phương châm "Uy tín - Chất lượng - Hiệu quả", Anh Tuấn không ngừng nỗ lực để mang đến những sản phẩm và dịch vụ tốt nhất.',
+      title: 'Phương châm hoạt động',
+      content: 'Công ty TNHH SX–TM–DV Anh Tuấn luôn lấy quyền lợi và sự hài lòng của khách hàng làm nền tảng cho mọi hoạt động. Với phương châm “Uy tín – Chất lượng – Hiệu quả”, chúng tôi không ngừng nâng cao chất lượng sản phẩm, hoàn thiện dịch vụ và tối ưu quy trình cung ứng, nhằm mang đến những giải pháp vật liệu xây dựng phù hợp, minh bạch và đáng tin cậy cho từng công trình.',
       isOpen: false
     },
     {
-      title: 'Anh Tuấn PHÂN PHỐI NHỮNG SẢN PHẨM NÀO?',
-      content: 'Anh Tuấn chuyên phân phối các loại vật liệu xây dựng như: Sắt thép xây dựng (Pomina, Việt Nhật, Miền Nam...), xi măng, gạch tuynel, cát, đá xây dựng và các loại vật liệu khác phục vụ cho mọi công trình.',
+      title: 'Anh Tuấn phân phối những sản phẩm nào?',
+      content: 'Công ty TNHH SX–TM–DV Anh Tuấn chuyên cung cấp và phân phối đa dạng vật liệu xây dựng, bao gồm sắt thép xây dựng, xi măng, gạch tuynel, cát, đá và nhiều sản phẩm liên quan. Với nguồn hàng ổn định và quy trình cung ứng chuyên nghiệp, Anh Tuấn đáp ứng linh hoạt nhu cầu của các công trình dân dụng, thương mại và công nghiệp.',
       isOpen: false
     }
   ],
   COMMITMENTS: [
-    'Hàng bán với giá được niêm yết của nhà máy.',
-    'Tư vấn miễn phí nhiệt tình chu đáo về mặt kỹ thuật cho khách hàng.',
-    'Giao hàng đúng chất lượng, đúng tiến độ.',
-    'Giao hàng tận chân công trình, tạo mọi điều kiện tốt nhất cho khách hàng.',
-    'Lấy cái lợi của khách hàng là trọng tâm.'
+    'Giá cả minh bạch, cạnh tranh',
+    'Sản phẩm đúng tiêu chuẩn',
+    'Tư vấn tận tâm, chuyên nghiệp',
+    'Giao hàng đúng hẹn',
+    'Đồng hành cùng khách hàng'
   ]
 }
 

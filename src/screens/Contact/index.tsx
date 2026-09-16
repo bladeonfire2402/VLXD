@@ -33,14 +33,14 @@ const ContactData = {
   HQ_INFO: [
     { label: 'Địa chỉ:', value: '71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM' },
     { label: 'Điện thoại:', value: '(028) 3812 4464' },
-    { label: 'Tư vấn bán hàng:', value: '0909 553 750' },
+    { label: 'Tư vấn bán hàng:', value: '0909 746 816' },
     { label: 'Mã số thuế:', value: '0309758550', normal: true },
     { label: 'Cấp ngày:', value: '26/01/2010 tại TP.HCM', normal: true }
   ],
   WAREHOUSE_TITLE: 'KHO HÀNG',
   WAREHOUSE_INFO: [
     { label: 'Địa chỉ:', value: '71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM' },
-    { label: 'Tư vấn bán hàng:', value: '0909 553 750' },
+    { label: 'Tư vấn bán hàng:', value: '0909 746 816' },
     { label: 'Tư vấn bán hàng:', value: '0911 702 879' },
     { label: 'Tư vấn qua Zalo:', value: '0911 702 879' }
   ],

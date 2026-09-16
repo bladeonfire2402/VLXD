@@ -19,18 +19,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-    return (
-      <html lang="vi">
-        <body className={roboto.className}>
-          <StyledComponentsRegistry>
-            <Providers>
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="vi">
+      <body className={roboto.className}>
+        <StyledComponentsRegistry>
+          <Providers>
             {/* Layer 1: Layout Wrapper */}
             <div className="app-wrapper">
               <Header />
-              
+
               {/* Layer 1: Main Content Screen */}
               <main className="main-content">
                 {children}
@@ -40,14 +40,14 @@ export default function RootLayout({
             </div>
 
             {/* Floating Social Media Bar */}
-            <SocialMediaBar position="bottom-right" phoneNumber="0909 553 750" />
+            <SocialMediaBar position="bottom-right" phoneNumber="0909 746 816" />
 
             {/* Layer 2: Global Modal Manager */}
             <GlobalModalManager />
             <ToastContainer position="bottom-right" autoClose={3000} />
-            </Providers>
-          </StyledComponentsRegistry>
-        </body>
-      </html>
-    );
-  }
+          </Providers>
+        </StyledComponentsRegistry>
+      </body>
+    </html>
+  );
+}

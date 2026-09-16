@@ -4,9 +4,12 @@ export const MENU_ITEMS = [
     label: 'VẬT LIỆU XÂY DỰNG', 
     url: '/san-pham',
     children: [
-      { label: 'Đá xây dựng', url: '/san-pham/da-xay-dung' },
+      { label: 'Sắt thép xây dựng', url: '/san-pham/sat-thep-xay-dung' },
+      { label: 'Xi măng', url: '/san-pham/xi-mang' },
+      { label: 'Gạch tuynel', url: '/san-pham/gach-tuynel' },
       { label: 'Cát xây dựng', url: '/san-pham/cat-xay-dung' },
-      { label: 'Bê tông thương phẩm', url: '/san-pham/be-tong-thuong-pham' },
+      { label: 'Đá xây dựng', url: '/san-pham/da-xay-dung' },
+      { label: 'Vật liệu xây dựng khác', url: '/san-pham/vat-lieu-xay-dung-khac' },
     ]
   },
   { label: 'TIN TỨC', url: '/tin-tuc' },
@@ -17,14 +20,22 @@ import { Product } from '@/types/product';
 
 // Category slug -> name mapping
 export const CATEGORY_MAP: Record<string, string> = {
-  'da-xay-dung': 'Đá xây dựng',
+  'sat-thep-xay-dung': 'Sắt thép xây dựng',
+  'xi-mang': 'Xi măng',
+  'gach-tuynel': 'Gạch tuynel',
   'cat-xay-dung': 'Cát xây dựng',
+  'da-xay-dung': 'Đá xây dựng',
+  'vat-lieu-xay-dung-khac': 'Vật liệu xây dựng khác',
   'be-tong-thuong-pham': 'Bê tông thương phẩm',
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  'da-xay-dung': 'Cung cấp mọi loại đá xây dựng, đủ kích cỡ, giao hàng tận công trình khi quý khách có nhu cầu.',
+  'sat-thep-xay-dung': 'Cung cấp sắt thép xây dựng chất lượng cao từ các thương hiệu uy tín.',
+  'xi-mang': 'Cung cấp các loại xi măng chất lượng cho mọi công trình.',
+  'gach-tuynel': 'Cung cấp gạch tuynel xây dựng các loại.',
   'cat-xay-dung': 'Cung cấp mọi loại cát xây dựng, cát san lấp, cát bê tông, cát xây tô chất lượng cao.',
+  'da-xay-dung': 'Cung cấp mọi loại đá xây dựng, đủ kích cỡ, giao hàng tận công trình khi quý khách có nhu cầu.',
+  'vat-lieu-xay-dung-khac': 'Cung cấp đa dạng các loại vật liệu xây dựng khác.',
   'be-tong-thuong-pham': 'Cung cấp bê tông thương phẩm các mác, bơm bê tông tận công trình, giao hàng nhanh chóng.',
 };
 

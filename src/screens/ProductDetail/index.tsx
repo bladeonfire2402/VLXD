@@ -56,7 +56,7 @@ const ProductDetailData = {
   COMPANY_INFO: {
     NAME: 'MUA BÁN VẬT LIỆU XÂY DỰNG',
     ADDRESS: 'Địa chỉ: 71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM',
-    TEL: 'Tel: 0909 553 750 - 0911 702 879',
+    TEL: 'Tel: 0909 746 816 - 0911 702 879',
     EMAIL: 'Email: vlxdtanphu2026@gmail.com',
     WEBSITE_URL: 'https://muabanvatlieuixaydung.com',
     WEBSITE_TEXT: 'Website: muabanvatlieuxaydung.com'
@@ -65,7 +65,7 @@ const ProductDetailData = {
   QUICK_CONTACT: {
     TITLE: 'LIÊN HỆ NHANH',
     CHAT: 'Chat online',
-    PHONE1: '0909 553 750',
+    PHONE1: '0909 746 816',
     PHONE2: '0911 702 879'
   },
   ORDER_FORM: {

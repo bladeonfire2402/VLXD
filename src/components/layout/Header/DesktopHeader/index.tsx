@@ -32,9 +32,9 @@ import {
 
 const DesktopHeaderData = {
   LOGO_SRC: AssetManager.logo,
-  LOGO_ALT: "Tu Thanh Phat Logo",
-  ADDRESS: "251,",
-  HOTLINE: "0909 553 750",
+  LOGO_ALT: "Anh Tuấn Logo",
+  ADDRESS: "Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương",
+  HOTLINE: "0909 746 816",
   ADDRESS_TITLE: "Địa chỉ",
   HOTLINE_TITLE: "Hotline",
   SEARCH_PLACEHOLDER: "Tìm kiếm sản phẩm...",
@@ -117,8 +117,8 @@ export const DesktopHeader = () => {
 
             <DesktopSearchWrapper>
               <DesktopSearchInputContainer $isOpen={isSearchOpen}>
-                <DesktopSearchInput 
-                  type="text" 
+                <DesktopSearchInput
+                  type="text"
                   placeholder={DesktopHeaderData.SEARCH_PLACEHOLDER}
                 />
               </DesktopSearchInputContainer>

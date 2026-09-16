@@ -4,19 +4,19 @@ import { AssetManager } from '@/lib/AssetManager';
 
 const FooterData = {
   LOGO_ALT: 'VLXD Anh Tuấn Logo',
-  DESCRIPTION: 'Hệ thống phân phối vật liệu xây dựng hàng đầu. Cung cấp sản phẩm chất lượng cao, giá cả cạnh tranh với dịch vụ giao hàng tận nơi.',
+  DESCRIPTION: 'Đơn vị phân phối vật liệu xây dựng uy tín tại Bình Dương và các khu vực lân cận. Chúng tôi cam kết cung cấp sản phẩm chất lượng, có nguồn gốc rõ ràng với mức giá cạnh tranh, báo giá minh bạch và dịch vụ giao hàng tận nơi nhanh chóng, đúng tiến độ.',
   QUICK_LINKS_TITLE: 'Liên Kết Nhanh',
   QUICK_LINKS: [
     { label: 'Trang chủ', href: '/' },
-    { label: 'Sản phẩm', href: '/products' },
+    { label: 'Sản phẩm', href: '/san-pham' },
     { label: 'Chính sách & Quy định', href: '/info' },
-    { label: 'Liên hệ', href: '/contact' },
+    { label: 'Liên hệ', href: '/lien-he' },
   ],
   CONTACT_TITLE: 'Thông Tin Liên Hệ',
   CONTACT_INFO: [
-    '📍 123 Đường ABC, Quận X, TP. Hồ Chí Minh',
-    '📞 1900.1234.567',
-    '✉️ contact@vlxdpro.vn',
+    '📍 Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương',
+    '📞 0909 746 816',
+    '✉️ vlxdanhtuan79@gmail.com',
   ],
   COPYRIGHT: `© ${new Date().getFullYear()} VLXD Pro. All rights reserved.`,
   SOCIALS: [
@@ -30,11 +30,11 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
-        <div className="footer-section">
+        <div className="footer-section" style={{ marginRight: '15px' }}>
           <img src={AssetManager.logo} alt={FooterData.LOGO_ALT} style={{ maxWidth: '250px', marginBottom: '16px', display: 'block' }} />
-          <p>{FooterData.DESCRIPTION}</p>
+          <p style={{ fontSize: '13px',textAlign:'justify' }}>{FooterData.DESCRIPTION}</p>
         </div>
-        
+
         <div className="footer-section">
           <h3>{FooterData.QUICK_LINKS_TITLE}</h3>
           <ul className="footer-links">
@@ -43,7 +43,7 @@ export function Footer() {
             ))}
           </ul>
         </div>
-        
+
         <div className="footer-section">
           <h3>{FooterData.CONTACT_TITLE}</h3>
           <ul className="footer-contact">
@@ -53,7 +53,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <div className="footer-bottom-content">
           <p>{FooterData.COPYRIGHT}</p>

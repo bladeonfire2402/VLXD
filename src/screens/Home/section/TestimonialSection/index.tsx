@@ -19,24 +19,24 @@ const TestimonialSectionData = {
   TESTIMONIALS_LIST: [
     {
       id: 1,
-      name: 'NGÔ HOÀI THANH',
-      role: '/ KINH DOANH TỰ DO',
-      avatar: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&q=80',
-      quote: 'Vật liệu xây dựng do Anh Tuấn cung cấp luôn có giấy tờ xuất xứ rõ ràng, số lượng chính xác. Nhân viên tư vấn nhiệt tình và nhanh chóng.'
+      name: 'TRẦN MINH KHÔI',
+      role: '/ NHÀ THẦU XÂY DỰNG',
+      avatar: '/images/testimonials/avatar-1.png',
+      quote: 'Anh Tuấn cung cấp sắt thép đúng quy cách, đầy đủ chứng từ và bảo đảm tiến độ giao hàng. Đội ngũ tư vấn chuyên nghiệp, phản hồi nhanh chóng, giúp chúng tôi chủ động triển khai các công trình.'
     },
     {
       id: 2,
-      name: 'TRẦN VĂN AN',
-      role: '/ CHỦ THẦU XÂY DỰNG',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80',
-      quote: 'Giá cả cạnh tranh và giao hàng rất đúng hẹn. Đây là đối tác chiến lược mà công ty chúng tôi luôn tin tưởng lựa chọn cho các dự án lớn.'
+      name: 'LÊ QUỐC BẢO',
+      role: '/ CHỦ CỬA HÀNG VẬT LIỆU XÂY DỰNG',
+      avatar: '/images/testimonials/avatar-2.png',
+      quote: 'Chúng tôi đánh giá cao sự ổn định về chất lượng sản phẩm và khả năng cung ứng của Anh Tuấn. Hàng hóa được giao đúng số lượng, báo giá minh bạch và chính sách hỗ trợ đối tác rất tận tâm.'
     },
     {
       id: 3,
-      name: 'LÊ THỊ HOA',
-      role: '/ KHÁCH HÀNG CÁ NHÂN',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80',
-      quote: 'Tôi xây nhà lần đầu nên rất bỡ ngỡ, may nhờ có nhân viên hỗ trợ nhiệt tình nên đã chọn được vật liệu ưng ý với chi phí hợp lý.'
+      name: 'NGUYỄN THÀNH ĐẠT',
+      role: '/ KỸ SƯ XÂY DỰNG',
+      avatar: '/images/testimonials/avatar-3.png',
+      quote: 'Sản phẩm do Anh Tuấn phân phối có nguồn gốc rõ ràng và đáp ứng tốt các yêu cầu kỹ thuật của công trình. Đội ngũ làm việc trách nhiệm, tư vấn chính xác và luôn hỗ trợ kịp thời khi cần.'
     }
   ]
 };
