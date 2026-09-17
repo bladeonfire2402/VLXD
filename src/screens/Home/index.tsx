@@ -3,6 +3,7 @@
 import { HomeWrapper } from './styles';
 import Carousel from '@/components/ui/Carousel';
 import FeaturedProducts from './section/FeaturedProducts';
+import CategoryShowCase from './section/CategoryShowCase';
 import FAQAndCommitments from './section/FAQAndCommitments';
 import NewsSection from './section/NewsSection';
 import TestimonialSection from './section/TestimonialSection';
@@ -14,6 +15,7 @@ const HomeScreen = () => {
     <HomeWrapper>
       <Carousel images={AssetManager.banners} autoPlay={true} interval={4000} hideButtonCtr={true} />
       <FeaturedProducts />
+      <CategoryShowCase />
       <FAQAndCommitments />
       <NewsSection />
       <TestimonialSection />

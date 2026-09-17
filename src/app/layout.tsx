@@ -15,6 +15,9 @@ const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin", "vietn
 export const metadata: Metadata = {
   title: "VLXD - Anh Tuấn",
   description: "Hệ thống phân phối vật liệu xây dựng uy tín",
+  icons: {
+    icon: '/images/icon.png',
+  },
 };
 
 export default function RootLayout({
