@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const SidebarWrapper = styled.aside`
   display: flex;
@@ -114,7 +115,7 @@ export const ArticleItem = styled(Link)`
   }
 `;
 
-export const ArticleThumbnail = styled.img`
+export const ArticleThumbnail = styled(Image)`
   width: 60px;
   height: 45px;
   object-fit: cover;
@@ -146,7 +147,7 @@ export const FeaturedProductItem = styled(Link)`
   }
 `;
 
-export const FeaturedProductImage = styled.img`
+export const FeaturedProductImage = styled(Image)`
   width: 60px;
   height: 60px;
   object-fit: cover;

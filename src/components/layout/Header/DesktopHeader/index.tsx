@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { MapPin, Phone, Search, ChevronDown } from "lucide-react";
 import { AssetManagers } from "@/constants/assets";
-import { MENU_ITEMS } from "@/lib/constants";
+import { MENU_ITEMS } from "@/constants/data";
 import { RouteManager } from "@/constants/route";
 import {
   DesktopTop,
@@ -61,7 +62,13 @@ export const DesktopHeader = () => {
         <div className="header-container">
           <DesktopTopContent>
             <DesktopLogo href={RouteManager.HOME}>
-              <img src={DesktopHeaderData.LOGO_SRC} alt={DesktopHeaderData.LOGO_ALT} />
+              <Image
+                src={DesktopHeaderData.LOGO_SRC}
+                alt={DesktopHeaderData.LOGO_ALT}
+                width={240}
+                height={80}
+                priority
+              />
             </DesktopLogo>
 
             <DesktopInfo>

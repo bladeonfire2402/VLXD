@@ -33,7 +33,8 @@ const ContactData = {
   HQ_TITLE: 'TRỤ SỞ CHÍNH',
   HQ_INFO: [
     {
-      label: 'Địa chỉ:', value: 'Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương' },
+      label: 'Địa chỉ:', value: 'Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương'
+    },
     { label: 'Điện thoại:', value: '0909 746 816' },
     { label: 'Email:', value: 'vlxdanhtuan79@gmail.com' },
     { label: 'Mã số doanh nghiệp:', value: '3702985730', normal: true },

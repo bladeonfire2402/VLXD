@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { AssetManagers } from '@/constants/assets';
 import { RouteManager } from '@/constants/route';
 
@@ -32,8 +33,14 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section" style={{ marginRight: '15px' }}>
-          <img src={AssetManagers.branding.logoWithSlogan} alt={FooterData.LOGO_ALT} style={{ maxWidth: '250px', marginBottom: '16px', display: 'block' }} />
-          <p style={{ fontSize: '13px',textAlign:'justify' }}>{FooterData.DESCRIPTION}</p>
+          <Image
+            src={AssetManagers.branding.logoWithSlogan}
+            alt={FooterData.LOGO_ALT}
+            width={250}
+            height={80}
+            style={{ maxWidth: '250px', height: 'auto', marginBottom: '16px', display: 'block' }}
+          />
+          <p style={{ fontSize: '13px', textAlign: 'justify' }}>{FooterData.DESCRIPTION}</p>
         </div>
 
         <div className="footer-section">

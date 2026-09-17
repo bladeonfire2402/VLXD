@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ContentBlock } from '@/interface/news/news';
 import { ContentWrapper, ProductEmbeddedWrapper, ProductEmbeddedTitle } from './styles';
 
@@ -28,10 +29,12 @@ const NewsContentRenderer: React.FC<NewsContentRendererProps> = ({ blocks }) => 
       case 'image':
         return (
           <figure key={index}>
-            <img
+            <Image
               src={block.url}
               alt={block.alt || 'Article image'}
-              loading="lazy"
+              width={800}
+              height={500}
+              style={{ width: '100%', height: 'auto' }}
             />
             {block.caption && (
               <figcaption>
@@ -54,7 +57,7 @@ const NewsContentRenderer: React.FC<NewsContentRendererProps> = ({ blocks }) => 
       case 'quote':
         return (
           <blockquote key={index}>
-            "{block.content}"
+            &quot;{block.content}&quot;
             {block.author && (
               <footer>
                 — {block.author}

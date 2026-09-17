@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import Image from 'next/image';
 
 /* ===== HERO SECTION ===== */
 export const HeroGrid = styled.div`
@@ -26,11 +27,10 @@ export const GalleryMain = styled.div`
   overflow: hidden;
   border-radius: 4px;
   background-color: #f5f5f5;
+  position: relative;
 `;
 
-export const GalleryMainImage = styled.img`
-  width: 100%;
-  height: 100%;
+export const GalleryMainImage = styled(Image)`
   object-fit: cover;
 `;
 
@@ -39,7 +39,7 @@ export const GalleryThumbnails = styled.div`
   gap: 8px;
 `;
 
-export const Thumbnail = styled.img<{ $active?: boolean }>`
+export const Thumbnail = styled(Image)<{ $active?: boolean }>`
   width: 60px;
   height: 45px;
   object-fit: cover;
@@ -146,7 +146,7 @@ export const CompanyCard = styled.div`
   background-color: #fafafa;
 `;
 
-export const CompanyLogo = styled.img`
+export const CompanyLogo = styled(Image)`
   width: 100px;
   height: auto;
   flex-shrink: 0;

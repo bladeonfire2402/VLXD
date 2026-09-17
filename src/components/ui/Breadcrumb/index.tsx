@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { CATEGORY_MAP, findProductBySlug } from '@/lib/constants';
+import { CATEGORY_MAP, findProductBySlug } from '@/constants/data';
 import { RouteManager } from '@/constants/route';
-import { 
-  BreadcrumbWrapper, 
-  BreadcrumbContainer, 
-  BreadcrumbLink, 
-  Separator, 
-  CurrentPage 
+import {
+  BreadcrumbWrapper,
+  BreadcrumbContainer,
+  BreadcrumbLink,
+  Separator,
+  CurrentPage
 } from './styles';
 
 const BreadcrumbData = {

@@ -103,7 +103,13 @@ const NewsDetailScreen: React.FC<NewsDetailScreenProps> = ({ slug }) => {
         </AuthorInfo>
       </ArticleMeta>
 
-      <HeroImage src={article.thumbnailUrl} alt={article.title} />
+      <HeroImage
+        src={article.thumbnailUrl}
+        alt={article.title}
+        width={800}
+        height={500}
+        priority
+      />
 
       <NewsContentRenderer blocks={article.content} />
 

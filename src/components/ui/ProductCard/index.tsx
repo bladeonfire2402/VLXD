@@ -22,7 +22,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClickAction }) => 
     <Link href={RouteManager.productDetail(product.categorySlug, product.slug)} style={{ textDecoration: 'none' }}>
       <CardWrapper>
         <ImageContainer>
-          <ProductImage src={product.thumbnail} alt={product.name} loading="lazy" />
+          <ProductImage
+            src={product.thumbnail}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          />
         </ImageContainer>
         <ProductName>{product.name}</ProductName>
         <ActionText>{product.price || 'Liên hệ'}</ActionText>

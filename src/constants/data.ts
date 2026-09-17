@@ -1,5 +1,6 @@
 import { RouteManager } from '@/constants/route';
 import { AssetManagers } from '@/constants/assets';
+import { Product } from '@/interface/product/product';
 
 export const MENU_ITEMS = [
   { label: 'TRANG CHỦ', url: RouteManager.HOME },
@@ -18,8 +19,6 @@ export const MENU_ITEMS = [
   { label: 'TIN TỨC', url: RouteManager.NEWS },
   { label: 'LIÊN HỆ', url: RouteManager.CONTACT },
 ];
-
-import { Product } from '@/interface/product/product';
 
 // Category slug -> name mapping
 export const CATEGORY_MAP: Record<string, string> = {

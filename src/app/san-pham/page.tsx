@@ -1,5 +1,5 @@
 import ProductCategoryPage from '@/screens/ProductCategory';
-import { ALL_PRODUCTS } from '@/lib/constants';
+import { ALL_PRODUCTS } from '@/constants/data';
 
 export default function SanPhamPage() {
   return (

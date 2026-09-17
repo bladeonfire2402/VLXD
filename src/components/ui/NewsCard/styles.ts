@@ -1,16 +1,19 @@
 import styled from 'styled-components';
+import NextImage from 'next/image';
 
 export const CardWrapper = styled.div`
+  background: var(--color-bg-primary, #FFFFFF);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  height: 100%;
-  background-color: white;
 
   &:hover {
-    box-shadow: var(--shadow-md, 0 4px 12px rgba(0, 0, 0, 0.1));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
   }
 `;
 
@@ -21,12 +24,7 @@ export const ImageContainer = styled.div`
   overflow: hidden;
 `;
 
-export const Image = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+export const CardImage = styled(NextImage)`
   object-fit: cover;
   transition: transform 0.3s ease;
   
@@ -34,6 +32,8 @@ export const Image = styled.img`
     transform: scale(1.05);
   }
 `;
+
+export const Image = CardImage;
 
 export const DateBadge = styled.div`
   position: absolute;

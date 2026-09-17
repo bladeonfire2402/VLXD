@@ -25,13 +25,13 @@ const PartnerLogos = () => {
           {/* First set of logos */}
           {repeatedLogos.map((logo, index) => (
             <LogoWrapper key={`set1-${logo.id}-${index}`}>
-              <LogoImage src={logo.url} alt={logo.name} loading="lazy" />
+              <LogoImage src={logo.url} alt={logo.name} width={220} height={120} />
             </LogoWrapper>
           ))}
           {/* Second set of logos (duplicated for seamless looping) */}
           {repeatedLogos.map((logo, index) => (
             <LogoWrapper key={`set2-${logo.id}-${index}`}>
-              <LogoImage src={logo.url} alt={logo.name} loading="lazy" />
+              <LogoImage src={logo.url} alt={logo.name} width={220} height={120} />
             </LogoWrapper>
           ))}
         </MarqueeTrack>

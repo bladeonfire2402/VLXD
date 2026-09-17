@@ -66,7 +66,7 @@ const ProductDetailData = {
     TITLE: 'LIÊN HỆ NHANH',
     CHAT: 'Chat online',
     PHONE1: '0909 746 816',
-    PHONE2: '0911 702 879'
+    PHONE2: 'vlxdanhtuan79@gmail.com'
   },
   ORDER_FORM: {
     TITLE: 'ĐẶT HÀNG ONLINE',
@@ -111,6 +111,9 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
             <GalleryMainImage
               src={allImages[selectedImageIndex]}
               alt={product.name}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </GalleryMain>
           <GalleryThumbnails>
@@ -119,6 +122,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
                 key={idx}
                 src={img}
                 alt={`${product.name} - ${idx + 1}`}
+                width={60}
+                height={45}
                 $active={idx === selectedImageIndex}
                 onClick={() => setSelectedImageIndex(idx)}
               />

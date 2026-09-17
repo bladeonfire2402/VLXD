@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const SectionWrapper = styled.section`
   padding: 60px 16px;
@@ -101,9 +102,7 @@ export const ImageInner = styled.div`
   position: relative;
 `;
 
-export const CategoryImage = styled.img`
-  width: 100%;
-  height: 100%;
+export const CategoryImage = styled(Image)`
   object-fit: cover;
 `;
 

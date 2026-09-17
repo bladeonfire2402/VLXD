@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const DetailContainer = styled.main`
   max-width: 800px;
@@ -92,7 +93,7 @@ export const PublishDate = styled.span`
   color: #64748B;
 `;
 
-export const HeroImage = styled.img`
+export const HeroImage = styled(Image)`
   width: 100%;
   height: auto;
   max-height: 500px;

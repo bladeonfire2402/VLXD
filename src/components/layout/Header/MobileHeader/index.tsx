@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Search, Menu, Plus, Minus } from "lucide-react";
 import { AssetManagers } from "@/constants/assets";
-import { MENU_ITEMS } from "@/lib/constants";
+import { MENU_ITEMS } from "@/constants/data";
 import { RouteManager } from "@/constants/route";
 import {
   MobileHeaderWrapper,
@@ -68,7 +69,13 @@ export const MobileHeader = () => {
         <div className="header-container">
           <MobileTopContent>
             <MobileLogo href={RouteManager.HOME}>
-              <img src={MobileHeaderData.LOGO_SRC} alt={MobileHeaderData.LOGO_ALT} />
+              <Image
+                src={MobileHeaderData.LOGO_SRC}
+                alt={MobileHeaderData.LOGO_ALT}
+                width={150}
+                height={50}
+                priority
+              />
             </MobileLogo>
           </MobileTopContent>
         </div>
@@ -95,14 +102,14 @@ export const MobileHeader = () => {
             return (
               <MobileMenuItem key={index}>
                 <MobileItemHeader>
-                  <MobileMenuLink 
-                    href={item.url} 
+                  <MobileMenuLink
+                    href={item.url}
                     $isActive={isActive}
                     onClick={() => !item.children && setIsMenuOpen(false)}
                   >
                     {item.label}
                   </MobileMenuLink>
-                  
+
                   {item.children && (
                     <MobileToggleBtn
                       onClick={(e) => {
@@ -114,14 +121,14 @@ export const MobileHeader = () => {
                     </MobileToggleBtn>
                   )}
                 </MobileItemHeader>
-                
+
                 {item.children && (
                   <MobileSubmenu $isOpen={isExpanded}>
                     <MobileSubmenuList>
                       {item.children.map((child, idx) => (
                         <MobileSubmenuItem key={idx}>
-                          <MobileSubmenuLink 
-                            href={child.url} 
+                          <MobileSubmenuLink
+                            href={child.url}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {child.label}
@@ -129,17 +136,17 @@ export const MobileHeader = () => {
                         </MobileSubmenuItem>
                       ))}
                     </MobileSubmenuList>
-                    
+
                   </MobileSubmenu>
                 )}
-                
+
               </MobileMenuItem>
             );
           })}
-          
+
           <MobileMenuItem>
             <MobileItemHeader>
-              <MobileMenuLink 
+              <MobileMenuLink
                 href="#"
                 $isActive={false}
                 onClick={(e) => {
@@ -162,20 +169,20 @@ export const MobileHeader = () => {
             </MobileItemHeader>
             <MobileSubmenu $isOpen={expandedItem === 'search'}>
               <MobileSubmenuList style={{ padding: '15px' }}>
-                <input 
-                  type="text" 
-                  placeholder={MobileHeaderData.SEARCH_PLACEHOLDER} 
+                <input
+                  type="text"
+                  placeholder={MobileHeaderData.SEARCH_PLACEHOLDER}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onKeyDown={handleSearch}
-                  style={{ 
-                    width: '100%', 
-                    padding: '10px 15px', 
-                    borderRadius: '4px', 
+                  style={{
+                    width: '100%',
+                    padding: '10px 15px',
+                    borderRadius: '4px',
                     border: '1px solid #ddd',
                     outline: 'none',
                     fontSize: '14px'
-                  }} 
+                  }}
                 />
               </MobileSubmenuList>
             </MobileSubmenu>

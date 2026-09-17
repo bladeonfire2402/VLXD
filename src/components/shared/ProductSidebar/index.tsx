@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { AssetManagers } from '@/constants/assets';
-import { CATEGORY_MAP, MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
+import { CATEGORY_MAP, MOCK_FEATURED_PRODUCTS } from '@/constants/data';
 import { RouteManager } from '@/constants/route';
 import {
   SidebarWrapper,
@@ -102,7 +102,7 @@ const ProductSidebar = () => {
         <ArticleList>
           {ProductSidebarData.MOCK_ARTICLES.map((article) => (
             <ArticleItem key={article.id} href={article.url}>
-              <ArticleThumbnail src={article.image} alt={article.title} loading="lazy" />
+              <ArticleThumbnail src={article.image} alt={article.title} width={60} height={45} />
               <ArticleTitle>{article.title}</ArticleTitle>
             </ArticleItem>
           ))}
@@ -114,7 +114,7 @@ const ProductSidebar = () => {
         <SidebarSectionTitle title={ProductSidebarData.TITLE_FEATURED} />
         {MOCK_FEATURED_PRODUCTS.slice(0, 4).map((product) => (
           <FeaturedProductItem key={product.id} href={RouteManager.productDetail(product.categorySlug, product.slug)}>
-            <FeaturedProductImage src={product.thumbnail} alt={product.name} loading="lazy" />
+            <FeaturedProductImage src={product.thumbnail} alt={product.name} width={60} height={60} />
             <FeaturedProductInfo>
               <FeaturedProductName>{product.name}</FeaturedProductName>
               <FeaturedProductPrice>{product.price || ProductSidebarData.PRICE_CONTACT}</FeaturedProductPrice>

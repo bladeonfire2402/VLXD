@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { AssetManagers } from '@/constants/assets';
 import {
   SectionWrapper,
@@ -63,7 +64,12 @@ const TestimonialSection = () => {
         <SliderContainer>
           <TestimonialContent key={currentTestimonial.id}>
             <AvatarContainer>
-              <img src={currentTestimonial.avatar} alt={currentTestimonial.name} loading="lazy" />
+              <Image
+                src={currentTestimonial.avatar}
+                alt={currentTestimonial.name}
+                width={80}
+                height={80}
+              />
             </AvatarContainer>
             <AuthorInfo>
               <Name>{currentTestimonial.name}</Name>

@@ -31,7 +31,12 @@ const NewsCard: React.FC<NewsCardProps> = ({
   return (
     <CardWrapper onClick={onClick}>
       <ImageContainer>
-        <Image src={image} alt={title} loading="lazy" />
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
         <DateBadge>
           <DayMonth>{date}</DayMonth>
           <Year>{year}</Year>

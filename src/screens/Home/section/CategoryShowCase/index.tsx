@@ -43,7 +43,12 @@ const CategoryShowCase = () => {
             >
               <ImageWrapper className="img-wrapper">
                 <ImageInner>
-                  <CategoryImage src={category.image} alt={category.name} loading="lazy" />
+                  <CategoryImage
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    sizes="160px"
+                  />
                 </ImageInner>
               </ImageWrapper>
               <CategoryName>{category.name}</CategoryName>

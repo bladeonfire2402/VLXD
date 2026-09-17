@@ -55,7 +55,13 @@ const Carousel: React.FC<CarouselProps> = ({
       <CarouselTrack $currentIndex={currentIndex} $height={height}>
         {images.map((img, index) => (
           <CarouselSlide key={index}>
-            <SlideImage src={img} alt={`Slide ${index + 1}`} />
+            <SlideImage
+              src={img}
+              alt={`Slide ${index + 1}`}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+            />
           </CarouselSlide>
         ))}
       </CarouselTrack>

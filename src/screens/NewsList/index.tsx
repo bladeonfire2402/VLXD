@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import NewsCard from '@/components/ui/NewsCard';
 import Pagination from '@/components/ui/Pagination';
@@ -70,7 +71,14 @@ const NewsListScreen: React.FC = () => {
       {/* Newspaper Hero Section */}
       <HeroSection>
         <MainHeroArticle onClick={() => handleArticleClick(featuredArticle.slug)}>
-          <img src={featuredArticle.thumbnailUrl} alt={featuredArticle.title} />
+          <Image
+            src={featuredArticle.thumbnailUrl}
+            alt={featuredArticle.title}
+            width={800}
+            height={400}
+            priority
+            style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '12px', marginBottom: '16px' }}
+          />
           <MetaData>
             <CategoryTag>{featuredArticle.category.name}</CategoryTag>
             <span>{formatDateFull(featuredArticle.publishedAt)}</span>

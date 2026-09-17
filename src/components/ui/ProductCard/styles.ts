@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const CardWrapper = styled.div`
   display: flex;
@@ -10,8 +11,12 @@ export const CardWrapper = styled.div`
   border: 1px solid var(--color-border, #CDD3D2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
-  
+  cursor: pointer;
+
   &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
     h3 {
       color: var(--color-primary, #B86B32);
     }
@@ -28,9 +33,7 @@ export const ImageContainer = styled.div`
   justify-content: center;
 `;
 
-export const ProductImage = styled.img`
-  max-width: 100%;
-  max-height: 100%;
+export const ProductImage = styled(Image)`
   object-fit: contain;
 `;
 

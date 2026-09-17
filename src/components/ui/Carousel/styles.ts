@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const CarouselContainer = styled.div`
   position: relative;
@@ -30,12 +31,13 @@ export const CarouselSlide = styled.div`
     height: 100%;
     background-color: rgba(32, 36, 38, 0.5); /* Than chì 50% opacity */
     pointer-events: none;
+    z-index: 1;
   }
 `;
 
-export const SlideImage = styled.img`
+export const SlideImage = styled(Image)`
   width: 100%;
-  height: 650px;
+  height: 100%;
   display: block;
   object-fit: cover;
 `;

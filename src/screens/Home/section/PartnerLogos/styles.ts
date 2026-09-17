@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import Image from 'next/image';
 
 const scroll = keyframes`
   0% {
@@ -55,7 +56,7 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const LogoImage = styled.img`
+export const LogoImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: fill;

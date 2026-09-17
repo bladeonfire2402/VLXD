@@ -1,4 +1,4 @@
-import { CATEGORY_MAP, CATEGORY_DESCRIPTIONS, getProductsByCategorySlug } from '@/lib/constants';
+import { CATEGORY_MAP, CATEGORY_DESCRIPTIONS, getProductsByCategorySlug } from '@/constants/data';
 import ProductCategoryPage from '@/screens/ProductCategory';
 import { notFound } from 'next/navigation';
 
