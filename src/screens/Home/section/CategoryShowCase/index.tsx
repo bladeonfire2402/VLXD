@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
+import { AssetManagers } from '@/constants/assets';
 import { RouteManager } from '@/constants/route';
 import { 
   SectionWrapper, 
@@ -16,11 +17,11 @@ import {
 } from './styles';
 
 const CATEGORIES = [
-  { name: 'ĐÁ XÂY DỰNG', image: '/images/product/gach_ngoi.png', slug: 'da-xay-dung' },
-  { name: 'CÁT XÂY DỰNG', image: '/images/product/gach_cui.png', slug: 'cat-xay-dung' },
-  { name: 'GẠCH TUYNEL', image: '/images/product/gach_ngoi.png', slug: 'gach-tuynel' },
-  { name: 'XI MĂNG', image: '/images/product/gach_cui.png', slug: 'xi-mang' },
-  { name: 'SẮT THÉP XÂY DỰNG', image: '/images/product/gach_ngoi.png', slug: 'sat-thep-xay-dung' }
+  { name: 'ĐÁ XÂY DỰNG', image: AssetManagers.products.gachNgoi, slug: 'da-xay-dung' },
+  { name: 'CÁT XÂY DỰNG', image: AssetManagers.products.gachCui, slug: 'cat-xay-dung' },
+  { name: 'GẠCH TUYNEL', image: AssetManagers.products.gachNgoi, slug: 'gach-tuynel' },
+  { name: 'XI MĂNG', image: AssetManagers.products.gachCui, slug: 'xi-mang' },
+  { name: 'SẮT THÉP XÂY DỰNG', image: AssetManagers.products.gachNgoi, slug: 'sat-thep-xay-dung' }
 ];
 
 const CategoryShowCase = () => {

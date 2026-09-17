@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AssetManagers } from '@/constants/assets';
 import {
   SectionWrapper,
   Container,
@@ -21,21 +22,21 @@ const TestimonialSectionData = {
       id: 1,
       name: 'TRẦN MINH KHÔI',
       role: '/ NHÀ THẦU XÂY DỰNG',
-      avatar: '/images/testimonials/avatar-1.png',
+      avatar: AssetManagers.testimonials.avatar1,
       quote: 'Anh Tuấn cung cấp sắt thép đúng quy cách, đầy đủ chứng từ và bảo đảm tiến độ giao hàng. Đội ngũ tư vấn chuyên nghiệp, phản hồi nhanh chóng, giúp chúng tôi chủ động triển khai các công trình.'
     },
     {
       id: 2,
       name: 'LÊ QUỐC BẢO',
       role: '/ CHỦ CỬA HÀNG VẬT LIỆU XÂY DỰNG',
-      avatar: '/images/testimonials/avatar-2.png',
+      avatar: AssetManagers.testimonials.avatar2,
       quote: 'Chúng tôi đánh giá cao sự ổn định về chất lượng sản phẩm và khả năng cung ứng của Anh Tuấn. Hàng hóa được giao đúng số lượng, báo giá minh bạch và chính sách hỗ trợ đối tác rất tận tâm.'
     },
     {
       id: 3,
       name: 'NGUYỄN THÀNH ĐẠT',
       role: '/ KỸ SƯ XÂY DỰNG',
-      avatar: '/images/testimonials/avatar-3.png',
+      avatar: AssetManagers.testimonials.avatar3,
       quote: 'Sản phẩm do Anh Tuấn phân phối có nguồn gốc rõ ràng và đáp ứng tốt các yêu cầu kỹ thuật của công trình. Đội ngũ làm việc trách nhiệm, tư vấn chính xác và luôn hỗ trợ kịp thời khi cần.'
     }
   ]

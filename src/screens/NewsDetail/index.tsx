@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import NewsContentRenderer from '@/components/shared/NewsContentRenderer';
 import NewsCard from '@/components/ui/NewsCard';
 import { mockNews } from '@/data/mockNews';
-import { NewsArticle } from '@/types/news';
+import { NewsArticle } from '@/interface/news/news';
 import {
   DetailContainer,
   BreadcrumbNav,
@@ -49,10 +49,10 @@ const formatDateToYear = (dateString: string) => {
 
 const NewsDetailScreen: React.FC<NewsDetailScreenProps> = ({ slug }) => {
   const router = useRouter();
-  
+
   // Find article by slug (mock API call)
   const article = mockNews.find((n) => n.slug === slug);
-  
+
   if (!article) {
     return (
       <DetailContainer style={{ textAlign: 'center', padding: '100px 20px' }}>

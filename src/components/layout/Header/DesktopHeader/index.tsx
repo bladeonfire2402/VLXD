@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { MapPin, Phone, Search, ChevronDown } from "lucide-react";
-import { AssetManager } from "@/lib/AssetManager";
+import { AssetManagers } from "@/constants/assets";
 import { MENU_ITEMS } from "@/lib/constants";
 import { RouteManager } from "@/constants/route";
 import {
@@ -32,7 +32,7 @@ import {
 } from "./styles";
 
 const DesktopHeaderData = {
-  LOGO_SRC: AssetManager.logo,
+  LOGO_SRC: AssetManagers.branding.logoWithSlogan,
   LOGO_ALT: "Anh Tuấn Logo",
   ADDRESS: "Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương",
   HOTLINE: "0909 746 816",

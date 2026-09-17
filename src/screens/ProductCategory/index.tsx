@@ -3,7 +3,7 @@
 import React from 'react';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
-import { Product } from '@/types/product';
+import { Product } from '@/interface/product/product';
 import { PageWrapper, Description, ProductGrid } from './styles';
 
 const ProductCategoryData = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { AssetManager } from '@/lib/AssetManager';
+import { AssetManagers } from '@/constants/assets';
 import { RouteManager } from '@/constants/route';
 
 const FooterData = {
@@ -32,7 +32,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="footer-container">
         <div className="footer-section" style={{ marginRight: '15px' }}>
-          <img src={AssetManager.logo} alt={FooterData.LOGO_ALT} style={{ maxWidth: '250px', marginBottom: '16px', display: 'block' }} />
+          <img src={AssetManagers.branding.logoWithSlogan} alt={FooterData.LOGO_ALT} style={{ maxWidth: '250px', marginBottom: '16px', display: 'block' }} />
           <p style={{ fontSize: '13px',textAlign:'justify' }}>{FooterData.DESCRIPTION}</p>
         </div>
 

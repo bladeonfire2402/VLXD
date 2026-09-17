@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { User, Phone, Mail, PenLine, MessageCircle } from 'lucide-react';
-import { Product } from '@/types/product';
+import { Product } from '@/interface/product/product';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
 import {
@@ -55,9 +55,9 @@ const ProductDetailData = {
   TAB_ORDER: 'Đặt hàng',
   COMPANY_INFO: {
     NAME: 'MUA BÁN VẬT LIỆU XÂY DỰNG',
-    ADDRESS: 'Địa chỉ: 71/3 Chế Lan Viên, P. Tây Thạnh, Q. Tân Phú, TP.HCM',
-    TEL: 'Tel: 0909 746 816 - 0911 702 879',
-    EMAIL: 'Email: vlxdtanphu2026@gmail.com',
+    ADDRESS: 'Địa chỉ: Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương',
+    TEL: 'Tel: 0909 746 816',
+    EMAIL: 'Email: vlxdanhtuan79@gmail.com',
     WEBSITE_URL: 'https://muabanvatlieuixaydung.com',
     WEBSITE_TEXT: 'Website: muabanvatlieuxaydung.com'
   },
@@ -160,9 +160,6 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, relatedP
                 <span>{ProductDetailData.COMPANY_INFO.ADDRESS}</span>
                 <span>{ProductDetailData.COMPANY_INFO.TEL}</span>
                 <span>{ProductDetailData.COMPANY_INFO.EMAIL}</span>
-                <a href={ProductDetailData.COMPANY_INFO.WEBSITE_URL} target="_blank" rel="noopener noreferrer">
-                  {ProductDetailData.COMPANY_INFO.WEBSITE_TEXT}
-                </a>
               </CompanyInfo>
             </CompanyCard>
 

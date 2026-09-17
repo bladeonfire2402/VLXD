@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AssetManagers } from "@/constants/assets";
 import { Roboto } from "next/font/google";
 import "@/styles/global.css";
 import { ToastContainer } from 'react-toastify';
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   title: "VLXD - Anh Tuấn",
   description: "Hệ thống phân phối vật liệu xây dựng uy tín",
   icons: {
-    icon: '/images/icon.png',
+    icon: AssetManagers.icons.icon,
   },
 };
 

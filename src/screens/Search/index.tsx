@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/ui/ProductCard';
-import { Product } from '@/types/product';
+import { Product } from '@/interface/product/product';
 import { RouteManager } from '@/constants/route';
 import { PageWrapper, EmptyState, ProductGrid } from './styles';
 
@@ -20,7 +20,7 @@ const SearchScreen: React.FC<SearchPageProps> = ({
   return (
     <PageWrapper>
       <SectionTitle title={`Kết quả tìm kiếm cho: "${keyword}"`} />
-      
+
       {products.length > 0 ? (
         <ProductGrid>
           {products.map((product) => (

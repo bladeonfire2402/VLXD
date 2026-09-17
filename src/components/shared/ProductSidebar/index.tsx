@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { AssetManagers } from '@/constants/assets';
 import { CATEGORY_MAP, MOCK_FEATURED_PRODUCTS } from '@/lib/constants';
 import { RouteManager } from '@/constants/route';
 import {
@@ -37,12 +38,12 @@ const ProductSidebarData = {
   ALL_PRODUCTS_LABEL: 'Vật liệu xây dựng',
   PRICE_CONTACT: 'Liên hệ',
   MOCK_ARTICLES: [
-    { id: 1, title: 'Nhà cung cấp cát xây tô HCM', image: '/images/news/news_1.jpg', url: '#' },
-    { id: 2, title: 'Một số kích thước gạch lát nền lục giác phổ biến', image: '/images/news/news_2.jpg', url: '#' },
-    { id: 3, title: 'Tổng hợp một số loại vật liệu mới trong xây dựng', image: '/images/news/news_1.jpg', url: '#' },
-    { id: 4, title: 'Nhà cung cấp thép xây dựng các loại', image: '/images/news/news_2.jpg', url: '#' },
-    { id: 5, title: 'Đại lý thép Việt Nhật Vina Kyoei', image: '/images/news/news_1.jpg', url: '#' },
-    { id: 6, title: 'Đá xây dựng 4x6 là gì?', image: '/images/news/news_2.jpg', url: '#' },
+    { id: 1, title: 'Nhà cung cấp cát xây tô HCM', image: AssetManagers.news.news1, url: '#' },
+    { id: 2, title: 'Một số kích thước gạch lát nền lục giác phổ biến', image: AssetManagers.news.news2, url: '#' },
+    { id: 3, title: 'Tổng hợp một số loại vật liệu mới trong xây dựng', image: AssetManagers.news.news1, url: '#' },
+    { id: 4, title: 'Nhà cung cấp thép xây dựng các loại', image: AssetManagers.news.news2, url: '#' },
+    { id: 5, title: 'Đại lý thép Việt Nhật Vina Kyoei', image: AssetManagers.news.news1, url: '#' },
+    { id: 6, title: 'Đá xây dựng 4x6 là gì?', image: AssetManagers.news.news2, url: '#' },
   ]
 };
 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Product } from '@/types/product';
+import { Product } from '@/interface/product/product';
 import { RouteManager } from '@/constants/route';
 import {
   CardWrapper,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContentBlock } from '@/types/news';
+import { ContentBlock } from '@/interface/news/news';
 import { ContentWrapper, ProductEmbeddedWrapper, ProductEmbeddedTitle } from './styles';
 
 interface NewsContentRendererProps {

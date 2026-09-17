@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { Search, Menu, Plus, Minus } from "lucide-react";
-import { AssetManager } from "@/lib/AssetManager";
+import { AssetManagers } from "@/constants/assets";
 import { MENU_ITEMS } from "@/lib/constants";
 import { RouteManager } from "@/constants/route";
 import {
@@ -27,7 +27,7 @@ import {
 } from "./styles";
 
 const MobileHeaderData = {
-  LOGO_SRC: AssetManager.logo,
+  LOGO_SRC: AssetManagers.branding.logoWithSlogan,
   LOGO_ALT: "Tu Thanh Phat Logo",
   MENU_ARIA_LABEL: "Toggle Menu",
   SEARCH_LABEL: "Tìm kiếm",

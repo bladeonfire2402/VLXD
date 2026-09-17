@@ -1,3 +1,4 @@
+import { AssetManagers } from '@/constants/assets';
 import {
   SectionWrapper,
   MarqueeContainer,
@@ -7,11 +8,11 @@ import {
 } from './styles';
 
 const PARTNER_LOGOS = [
-  { id: 1, name: 'Thái Bình Dương', url: '/images/partners/thai-binh-duong.png' },
-  { id: 2, name: 'QH', url: '/images/partners/qh.png' },
-  { id: 3, name: 'Yên Lê', url: '/images/partners/yen-le.png' },
-  { id: 4, name: 'Lâm Trường Phát', url: '/images/partners/lam-truong-phat.png' },
-  { id: 5, name: 'Thành Danh', url: '/images/partners/thanh-danh.png' },
+  { id: 1, name: 'Thái Bình Dương', url: AssetManagers.partners.thaiBinhDuong },
+  { id: 2, name: 'QH', url: AssetManagers.partners.qh },
+  { id: 3, name: 'Yên Lê', url: AssetManagers.partners.yenLe },
+  { id: 4, name: 'Lâm Trường Phát', url: AssetManagers.partners.lamTruongPhat },
+  { id: 5, name: 'Thành Danh', url: AssetManagers.partners.thanhDanh },
 ];
 
 const PartnerLogos = () => {

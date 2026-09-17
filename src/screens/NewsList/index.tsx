@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import NewsCard from '@/components/ui/NewsCard';
 import Pagination from '@/components/ui/Pagination';
 import { mockNews } from '@/data/mockNews';
-import { NewsArticle } from '@/types/news';
+import { NewsArticle } from '@/interface/news/news';
 import {
   NewsListContainer,
   HeroSection,
@@ -49,7 +49,7 @@ const NewsListScreen: React.FC = () => {
 
   // 1. Featured Article
   const featuredArticle = mockNews.find(n => n.isFeatured) || mockNews[0];
-  
+
   // 2. Trending Articles (Mock top 3 based on views if available, or just first 3)
   const trendingArticles = mockNews.slice(1, 4);
 
@@ -101,7 +101,7 @@ const NewsListScreen: React.FC = () => {
         <SectionHeader>
           <SectionTitle>Tin Mới Nhất</SectionTitle>
         </SectionHeader>
-        
+
         <NewsGrid>
           {currentGridArticles.map(article => (
             <NewsCard
@@ -116,7 +116,7 @@ const NewsListScreen: React.FC = () => {
           ))}
         </NewsGrid>
 
-        <Pagination 
+        <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           onPageChange={setCurrentPage}
