@@ -54,7 +54,7 @@ const Breadcrumb = () => {
     const segments = pathname.split('/').filter(Boolean); // ['san-pham', 'category', 'product?']
     const categorySlug = segments[1];
     const productSlug = segments[2];
-    const categoryName = CATEGORY_MAP[categorySlug];
+    const categoryName = CATEGORY_MAP[categorySlug as keyof typeof CATEGORY_MAP];
 
     // /san-pham/[category] — category page
     if (categoryName && !productSlug) {

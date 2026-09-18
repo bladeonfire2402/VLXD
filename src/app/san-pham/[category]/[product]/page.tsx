@@ -11,7 +11,7 @@ export default async function ProductPage({ params }: PageProps) {
   const { category, product: productSlug } = await params;
 
   // Validate category exists
-  if (!CATEGORY_MAP[category]) {
+  if (!CATEGORY_MAP[category as keyof typeof CATEGORY_MAP]) {
     notFound();
   }
 
