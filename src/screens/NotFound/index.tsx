@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, Layers, Mountain, Box } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import { RouteManager } from '@/constants/route';
+import { CategoryType } from '@/constants/data';
 import {
   NotFoundContainer,
   MainContent,
@@ -44,19 +45,19 @@ const NotFoundData = {
     {
       title: 'Đá xây dựng',
       desc: 'Vững chắc từ nền móng',
-      url: RouteManager.productCategory('da-xay-dung'),
+      url: RouteManager.productCategory(CategoryType.DA_XAY_DUNG),
       icon: Layers
     },
     {
       title: 'Cát xây dựng',
       desc: 'Cho từng hạng mục công trình',
-      url: RouteManager.productCategory('cat-xay-dung'),
+      url: RouteManager.productCategory(CategoryType.CAT_XAY_DUNG),
       icon: Mountain
     },
     {
       title: 'Bê tông thương phẩm',
       desc: 'Kết nối mọi kết cấu',
-      url: RouteManager.productCategory('be-tong'),
+      url: RouteManager.productCategory(CategoryType.BE_TONG_THUONG_PHAM),
       icon: Box
     }
   ]

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
-import { CATEGORY_MAP, findProductBySlug } from '@/constants/data';
+import { CATEGORY_MAP } from '@/constants/data';
+import { findProductBySlug } from '@/utils/productUtils';
 import { RouteManager } from '@/constants/route';
 import {
   BreadcrumbWrapper,

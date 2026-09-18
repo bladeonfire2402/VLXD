@@ -1,4 +1,5 @@
-import { findProductBySlug, getRelatedProducts, CATEGORY_MAP } from '@/constants/data';
+import { CATEGORY_MAP } from '@/constants/data';
+import { findProductBySlug, getRelatedProducts } from '@/utils/productUtils';
 import ProductDetailPage from '@/screens/ProductDetail';
 import { notFound } from 'next/navigation';
 

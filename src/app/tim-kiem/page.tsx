@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import SearchScreen from '@/screens/Search';
-import { searchProducts } from '@/constants/data';
+import { searchProducts } from '@/utils/productUtils';
 
 function SearchContent() {
   const searchParams = useSearchParams();

@@ -2,18 +2,29 @@ import { RouteManager } from '@/constants/route';
 import { AssetManagers } from '@/constants/assets';
 import { Product } from '@/interface/product/product';
 
+export enum CategoryType {
+  SAT_THEP_XAY_DUNG = 'sat-thep-xay-dung',
+  XI_MANG = 'xi-mang',
+  GACH_TUYNEL = 'gach-tuynel',
+  CAT_XAY_DUNG = 'cat-xay-dung',
+  DA_XAY_DUNG = 'da-xay-dung',
+  VAT_LIEU_XAY_DUNG_KHAC = 'vat-lieu-xay-dung-khac',
+  BE_TONG_THUONG_PHAM = 'be-tong-thuong-pham',
+}
+
 export const MENU_ITEMS = [
   { label: 'TRANG CHỦ', url: RouteManager.HOME },
   {
     label: 'VẬT LIỆU XÂY DỰNG',
     url: RouteManager.PRODUCTS,
     children: [
-      { label: 'Sắt thép xây dựng', url: RouteManager.productCategory('sat-thep-xay-dung') },
-      { label: 'Xi măng', url: RouteManager.productCategory('xi-mang') },
-      { label: 'Gạch tuynel', url: RouteManager.productCategory('gach-tuynel') },
-      { label: 'Cát xây dựng', url: RouteManager.productCategory('cat-xay-dung') },
-      { label: 'Đá xây dựng', url: RouteManager.productCategory('da-xay-dung') },
-      { label: 'Vật liệu xây dựng khác', url: RouteManager.productCategory('vat-lieu-xay-dung-khac') },
+      { label: 'Sắt thép xây dựng', url: RouteManager.productCategory(CategoryType.SAT_THEP_XAY_DUNG) },
+      { label: 'Xi măng', url: RouteManager.productCategory(CategoryType.XI_MANG) },
+      { label: 'Gạch tuynel', url: RouteManager.productCategory(CategoryType.GACH_TUYNEL) },
+      { label: 'Cát xây dựng', url: RouteManager.productCategory(CategoryType.CAT_XAY_DUNG) },
+      { label: 'Đá xây dựng', url: RouteManager.productCategory(CategoryType.DA_XAY_DUNG) },
+      { label: 'Bê tông thương phẩm', url: RouteManager.productCategory(CategoryType.BE_TONG_THUONG_PHAM) },
+      { label: 'Vật liệu xây dựng khác', url: RouteManager.productCategory(CategoryType.VAT_LIEU_XAY_DUNG_KHAC) },
     ]
   },
   { label: 'TIN TỨC', url: RouteManager.NEWS },
@@ -21,24 +32,24 @@ export const MENU_ITEMS = [
 ];
 
 // Category slug -> name mapping
-export const CATEGORY_MAP: Record<string, string> = {
-  'sat-thep-xay-dung': 'Sắt thép xây dựng',
-  'xi-mang': 'Xi măng',
-  'gach-tuynel': 'Gạch tuynel',
-  'cat-xay-dung': 'Cát xây dựng',
-  'da-xay-dung': 'Đá xây dựng',
-  'vat-lieu-xay-dung-khac': 'Vật liệu xây dựng khác',
-  'be-tong-thuong-pham': 'Bê tông thương phẩm',
+export const CATEGORY_MAP: Record<CategoryType, string> = {
+  [CategoryType.SAT_THEP_XAY_DUNG]: 'Sắt thép xây dựng',
+  [CategoryType.XI_MANG]: 'Xi măng',
+  [CategoryType.GACH_TUYNEL]: 'Gạch tuynel',
+  [CategoryType.CAT_XAY_DUNG]: 'Cát xây dựng',
+  [CategoryType.DA_XAY_DUNG]: 'Đá xây dựng',
+  [CategoryType.VAT_LIEU_XAY_DUNG_KHAC]: 'Vật liệu xây dựng khác',
+  [CategoryType.BE_TONG_THUONG_PHAM]: 'Bê tông thương phẩm',
 };
 
-export const CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  'sat-thep-xay-dung': 'Cung cấp sắt thép xây dựng chất lượng cao từ các thương hiệu uy tín.',
-  'xi-mang': 'Cung cấp các loại xi măng chất lượng cho mọi công trình.',
-  'gach-tuynel': 'Cung cấp gạch tuynel xây dựng các loại.',
-  'cat-xay-dung': 'Cung cấp mọi loại cát xây dựng, cát san lấp, cát bê tông, cát xây tô chất lượng cao.',
-  'da-xay-dung': 'Cung cấp mọi loại đá xây dựng, đủ kích cỡ, giao hàng tận công trình khi quý khách có nhu cầu.',
-  'vat-lieu-xay-dung-khac': 'Cung cấp đa dạng các loại vật liệu xây dựng khác.',
-  'be-tong-thuong-pham': 'Cung cấp bê tông thương phẩm các mác, bơm bê tông tận công trình, giao hàng nhanh chóng.',
+export const CATEGORY_DESCRIPTIONS: Record<CategoryType, string> = {
+  [CategoryType.SAT_THEP_XAY_DUNG]: 'Cung cấp sắt thép xây dựng chất lượng cao từ các thương hiệu uy tín.',
+  [CategoryType.XI_MANG]: 'Cung cấp các loại xi măng chất lượng cho mọi công trình.',
+  [CategoryType.GACH_TUYNEL]: 'Cung cấp gạch tuynel xây dựng các loại.',
+  [CategoryType.CAT_XAY_DUNG]: 'Cung cấp mọi loại cát xây dựng, cát san lấp, cát bê tông, cát xây tô chất lượng cao.',
+  [CategoryType.DA_XAY_DUNG]: 'Cung cấp mọi loại đá xây dựng, đủ kích cỡ, giao hàng tận công trình khi quý khách có nhu cầu.',
+  [CategoryType.VAT_LIEU_XAY_DUNG_KHAC]: 'Cung cấp đa dạng các loại vật liệu xây dựng khác.',
+  [CategoryType.BE_TONG_THUONG_PHAM]: 'Cung cấp bê tông thương phẩm các mác, bơm bê tông tận công trình, giao hàng nhanh chóng.',
 };
 
 // === ĐÁ XÂY DỰNG ===
@@ -85,34 +96,3 @@ export const ALL_PRODUCTS: Product[] = [
   ...MOCK_BE_TONG,
 ];
 
-// Helper: find product by slug
-export const findProductBySlug = (slug: string): Product | undefined => {
-  return ALL_PRODUCTS.find(p => p.slug === slug);
-};
-
-// Helper: get products by category slug
-export const getProductsByCategorySlug = (categorySlug: string): Product[] => {
-  return ALL_PRODUCTS.filter(p => p.categorySlug === categorySlug);
-};
-
-// Helper: get related products (same category, exclude self)
-export const getRelatedProducts = (product: Product, limit = 6): Product[] => {
-  return ALL_PRODUCTS
-    .filter(p => p.category === product.category && p.id !== product.id)
-    .slice(0, limit);
-};
-
-// Helper: search products by keyword
-export const searchProducts = (keyword: string): Product[] => {
-  if (!keyword || keyword.trim() === '') return [];
-  const lowerKeyword = keyword.toLowerCase().trim();
-
-  return ALL_PRODUCTS.filter(product => {
-    return (
-      product.name.toLowerCase().includes(lowerKeyword) ||
-      product.category.toLowerCase().includes(lowerKeyword) ||
-      (product.details && product.details.toLowerCase().includes(lowerKeyword)) ||
-      (product.tags && product.tags.some(tag => tag.toLowerCase().includes(lowerKeyword)))
-    );
-  });
-};
