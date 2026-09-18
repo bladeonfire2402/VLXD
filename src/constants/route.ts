@@ -4,6 +4,7 @@ export const RouteManager = {
   CONTACT: '/lien-he',
   NEWS: '/tin-tuc',
   SEARCH: '/tim-kiem',
+  POLICY: '/chinh-sach',
   
   // Dynamic routes
   productCategory: (category: string) => `/san-pham/${category}`,

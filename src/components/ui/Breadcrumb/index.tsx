@@ -16,6 +16,7 @@ const BreadcrumbData = {
   HOME: 'Trang chủ',
   PRODUCTS: 'Vật liệu xây dựng',
   CONTACT: 'Liên hệ',
+  POLICY: 'Chính sách & Quy định',
   FALLBACK_PAGE: 'Trang',
   SEPARATOR: '»'
 };
@@ -24,6 +25,7 @@ const BreadcrumbData = {
 const staticRoutes: Record<string, string> = {
   [RouteManager.CONTACT]: BreadcrumbData.CONTACT,
   [RouteManager.PRODUCTS]: BreadcrumbData.PRODUCTS,
+  [RouteManager.POLICY]: BreadcrumbData.POLICY,
 };
 
 const Breadcrumb = () => {

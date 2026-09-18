@@ -11,7 +11,7 @@ const FooterData = {
   QUICK_LINKS: [
     { label: 'Trang chủ', href: RouteManager.HOME },
     { label: 'Sản phẩm', href: RouteManager.PRODUCTS },
-    { label: 'Chính sách & Quy định', href: '/info' },
+    { label: 'Chính sách & Quy định', href: RouteManager.POLICY },
     { label: 'Liên hệ', href: RouteManager.CONTACT },
   ],
   CONTACT_TITLE: 'Thông Tin Liên Hệ',
