@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { AssetManagers } from '@/constants/assets';
 import { CATEGORY_MAP, MOCK_FEATURED_PRODUCTS } from '@/constants/data';
 import { RouteManager } from '@/constants/route';
+import { mockNews } from '@/data/mockNews';
 import {
   SidebarWrapper,
   SidebarSection,
@@ -37,15 +38,14 @@ const ProductSidebarData = {
   TAB_POPULAR: 'Xem nhiều',
   ALL_PRODUCTS_LABEL: 'Vật liệu xây dựng',
   PRICE_CONTACT: 'Liên hệ',
-  MOCK_ARTICLES: [
-    { id: 1, title: 'Nhà cung cấp cát xây tô HCM', image: AssetManagers.news.news1, url: '#' },
-    { id: 2, title: 'Một số kích thước gạch lát nền lục giác phổ biến', image: AssetManagers.news.news2, url: '#' },
-    { id: 3, title: 'Tổng hợp một số loại vật liệu mới trong xây dựng', image: AssetManagers.news.news1, url: '#' },
-    { id: 4, title: 'Nhà cung cấp thép xây dựng các loại', image: AssetManagers.news.news2, url: '#' },
-    { id: 5, title: 'Đại lý thép Việt Nhật Vina Kyoei', image: AssetManagers.news.news1, url: '#' },
-    { id: 6, title: 'Đá xây dựng 4x6 là gì?', image: AssetManagers.news.news2, url: '#' },
-  ]
 };
+
+const mappedArticles = mockNews.slice(0, 6).map((news) => ({
+  id: news.id,
+  title: news.title,
+  image: news.thumbnailUrl,
+  url: `/tin-tuc/${news.slug}`,
+}));
 
 // Helper component for section title
 const SidebarSectionTitle = ({ title }: { title: string }) => (
@@ -100,7 +100,7 @@ const ProductSidebar = () => {
           </Tab>
         </TabContainer>
         <ArticleList>
-          {ProductSidebarData.MOCK_ARTICLES.map((article) => (
+          {mappedArticles.map((article) => (
             <ArticleItem key={article.id} href={article.url}>
               <ArticleThumbnail src={article.image} alt={article.title} width={60} height={45} />
               <ArticleTitle>{article.title}</ArticleTitle>
