@@ -7,7 +7,7 @@ export const AssetManagers = {
     branding: {
         logo: '/images/branding/logo.png',
         logoWithSlogan: '/images/branding/logo-with-slogan.png',
-        fallbackLogo: '/images/logo.png',
+        fallbackLogo: '/images/branding/logo-with-slogan.png',
     },
     testimonials: {
         avatar1: '/images/testimonials/avatar-1.png',
@@ -30,6 +30,6 @@ export const AssetManagers = {
         news2: '/images/news/news_2.jpg',
     },
     icons: {
-        icon: '/images/icon.png',
+        icon: '/images/branding/logo.png',
     },
 };
