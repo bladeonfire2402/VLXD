@@ -19,8 +19,8 @@ export interface SocialMediaBarProps {
 
 export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
   position = "middle-right",
-  phoneNumber = "0909553750",
-  zaloNumber = "0909553750",
+  phoneNumber = "0909746816",
+  zaloNumber = "0909746816",
   youtubeUrl = "#",
   facebookUrl = "#",
 }) => {

@@ -3,6 +3,8 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import NewsCard from '@/components/ui/NewsCard';
 import { SectionWrapper, Container, SectionHeader, Grid } from './styles';
 import { mockNews } from '@/data/mockNews';
+import { useRouter } from 'next/navigation';
+import { RouteManager } from '@/constants/route';
 
 const NewsSectionData = {
   TITLE: "TIN TỨC MỚI",
@@ -14,6 +16,7 @@ const mappedNewsList = mockNews.slice(0, 6).map((news) => {
   const day = String(dateObj.getDate()).padStart(2, '0');
   const month = String(dateObj.getMonth() + 1).padStart(2, '0');
   const year = String(dateObj.getFullYear());
+  //const router = useRouter();
 
   return {
     image: news.thumbnailUrl,

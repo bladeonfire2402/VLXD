@@ -61,17 +61,6 @@ export function Footer() {
           </ul>
         </div>
       </div>
-
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <p>{FooterData.COPYRIGHT}</p>
-          <div className="social-links">
-            {FooterData.SOCIALS.map((social, idx) => (
-              <Link key={idx} href={social.href} aria-label={social.ariaLabel}>{social.label}</Link>
-            ))}
-          </div>
-        </div>
-      </div>
     </footer>
   );
 }
