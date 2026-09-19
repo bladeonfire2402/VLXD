@@ -22,7 +22,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
   phoneNumber = "0909746816",
   zaloNumber = "0909746816",
   youtubeUrl = "#",
-  facebookUrl = "#",
+  facebookUrl = "https://www.facebook.com/profile.php?id=61592553366151&locale=vi_VN",
 }) => {
   // Determine tooltip orientation class
   const isLeft = position.toLowerCase().includes("left");
@@ -61,7 +61,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
       </SocialMediaItem>
 
       {/* Youtube Button */}
-      <SocialMediaItem
+      {/* <SocialMediaItem
         href={youtubeUrl}
         target="_blank"
         rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
           <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.522 3.5 12 3.5 12 3.5s-7.522 0-9.388.556a3.003 3.003 0 0 0-2.11 2.107C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.107C4.478 20.5 12 20.5 12 20.5s7.522 0 9.388-.556a3.003 3.003 0 0 0 2.11-2.107C24 15.971 24 12 24 12s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
         </svg>
         <Tooltip>Kênh Youtube</Tooltip>
-      </SocialMediaItem>
+      </SocialMediaItem> */}
 
       {/* Facebook Button */}
       <SocialMediaItem

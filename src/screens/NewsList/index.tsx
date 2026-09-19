@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import NewsCard from '@/components/ui/NewsCard';
 import Pagination from '@/components/ui/Pagination';
 import { mockNews } from '@/data/mockNews';
-import { NewsArticle } from '@/interface/news/news';
 import {
   NewsListContainer,
   HeroSection,

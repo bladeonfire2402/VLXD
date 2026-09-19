@@ -16,7 +16,6 @@ const mappedNewsList = mockNews.slice(0, 6).map((news) => {
   const day = String(dateObj.getDate()).padStart(2, '0');
   const month = String(dateObj.getMonth() + 1).padStart(2, '0');
   const year = String(dateObj.getFullYear());
-  //const router = useRouter();
 
   return {
     image: news.thumbnailUrl,
@@ -24,10 +23,17 @@ const mappedNewsList = mockNews.slice(0, 6).map((news) => {
     year: year,
     title: news.title.toUpperCase(),
     description: news.summary,
+    slug: news.slug,
   };
 });
 
 const NewsSection = () => {
+  const router = useRouter();
+  
+  const handleArticleClick = (slug: string) => {
+    router.push(`/tin-tuc/${slug}`);
+  };
+  
   return (
     <SectionWrapper>
       <Container>
@@ -46,6 +52,7 @@ const NewsSection = () => {
               year={news.year}
               title={news.title}
               description={news.description}
+              onClick={() => handleArticleClick(news.slug)}
             />
           ))}
         </Grid>
