@@ -34,10 +34,10 @@ export function Footer() {
       <div className="footer-container">
         <div className="footer-section" style={{ marginRight: '15px' }}>
           <Image
-            src={AssetManagers.branding.logoWithSlogan}
+            src={AssetManagers.branding.logo}
             alt={FooterData.LOGO_ALT}
-            width={250}
-            height={80}
+            width={200}
+            height={60}
             style={{ maxWidth: '250px', height: 'auto', marginBottom: '16px', display: 'block' }}
           />
           <p style={{ fontSize: '13px', textAlign: 'justify' }}>{FooterData.DESCRIPTION}</p>
