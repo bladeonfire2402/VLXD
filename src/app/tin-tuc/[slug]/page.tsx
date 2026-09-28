@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: NewsDetailPageProps): Promise
   }
 
   return {
-    title: `${article.title} | Tin tức VLXD`,
+    title: `${article.title} | Tin tức Công ty Anh Tuấn`,
     description: article.summary,
   };
 }

@@ -14,7 +14,7 @@ import { SocialMediaBar } from "@/components/layout/social-media-bar";
 const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin", "vietnamese"] });
 
 export const metadata: Metadata = {
-  title: "VLXD - Anh Tuấn",
+  title: "Công ty - Anh Tuấn",
   description: "Hệ thống phân phối vật liệu xây dựng uy tín",
   icons: {
     icon: AssetManagers.icons.icon,
@@ -44,7 +44,7 @@ export default function RootLayout({
             </div>
 
             {/* Floating Social Media Bar */}
-            <SocialMediaBar position="bottom-right" phoneNumber="0909 746 816" />
+            <SocialMediaBar position="bottom-right" phoneNumber="0909 074 567" />
 
             {/* Layer 2: Global Modal Manager */}
             <GlobalModalManager />

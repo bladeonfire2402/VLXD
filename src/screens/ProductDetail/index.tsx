@@ -56,7 +56,7 @@ const ProductDetailData = {
   COMPANY_INFO: {
     NAME: 'MUA BÁN VẬT LIỆU XÂY DỰNG',
     ADDRESS: 'Địa chỉ: Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương',
-    TEL: 'Tel: 0909 746 816',
+    TEL: 'Tel: 0909 074 567',
     EMAIL: 'Email: vlxdanhtuan79@gmail.com',
     WEBSITE_URL: 'https://muabanvatlieuixaydung.com',
     WEBSITE_TEXT: 'Website: muabanvatlieuxaydung.com'
@@ -65,7 +65,7 @@ const ProductDetailData = {
   QUICK_CONTACT: {
     TITLE: 'LIÊN HỆ NHANH',
     CHAT: 'Chat online',
-    PHONE1: '0909 746 816',
+    PHONE1: '0909 074 567',
     PHONE2: 'vlxdanhtuan79@gmail.com'
   },
   ORDER_FORM: {

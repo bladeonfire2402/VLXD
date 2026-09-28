@@ -35,7 +35,7 @@ const ContactData = {
     {
       label: 'Địa chỉ:', value: 'Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương'
     },
-    { label: 'Điện thoại:', value: '0909 746 816' },
+    { label: 'Điện thoại:', value: '0909 074 567' },
     { label: 'Email:', value: 'vlxdanhtuan79@gmail.com' },
     { label: 'Mã số doanh nghiệp:', value: '3702985730', normal: true },
     { label: 'Cấp ngày:', value: '03/06/2021', normal: true }
@@ -51,7 +51,7 @@ const ContactData = {
   BTN_SUBMITTING: 'ĐANG GỬI...',
   SUCCESS_MSG: 'Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ lại sớm nhất.',
   MAP_SRC: 'https://maps.google.com/maps?q=11.0880687,106.6519615&t=&z=15&ie=UTF8&iwloc=&output=embed',
-  MAP_TITLE: 'Google Map VLXD Anh Tuấn'
+  MAP_TITLE: 'Google Map Công ty Anh Tuấn'
 };
 
 const ContactPage = () => {

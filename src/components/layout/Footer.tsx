@@ -5,7 +5,7 @@ import { AssetManagers } from '@/constants/assets';
 import { RouteManager } from '@/constants/route';
 
 const FooterData = {
-  LOGO_ALT: 'VLXD Anh Tuấn Logo',
+  LOGO_ALT: 'Công ty Anh Tuấn Logo',
   DESCRIPTION: 'Đơn vị phân phối vật liệu xây dựng uy tín tại Bình Dương và các khu vực lân cận. Chúng tôi cam kết cung cấp sản phẩm chất lượng, có nguồn gốc rõ ràng với mức giá cạnh tranh, báo giá minh bạch và dịch vụ giao hàng tận nơi nhanh chóng, đúng tiến độ.',
   QUICK_LINKS_TITLE: 'Liên Kết Nhanh',
   QUICK_LINKS: [
@@ -17,10 +17,10 @@ const FooterData = {
   CONTACT_TITLE: 'Thông Tin Liên Hệ',
   CONTACT_INFO: [
     '📍 Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương',
-    '📞 0909 746 816',
+    '📞 0909 074 567',
     '✉️ vlxdanhtuan79@gmail.com',
   ],
-  COPYRIGHT: `© ${new Date().getFullYear()} VLXD Pro. All rights reserved.`,
+  COPYRIGHT: `© ${new Date().getFullYear()} CTY Pro. All rights reserved.`,
   SOCIALS: [
     { label: 'FB', ariaLabel: 'Facebook', href: '#' },
     { label: 'ZL', ariaLabel: 'Zalo', href: '#' },
