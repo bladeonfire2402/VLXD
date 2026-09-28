@@ -13,7 +13,6 @@ export interface SocialMediaBarProps {
   position?: SocialMediaPosition;
   phoneNumber?: string;
   zaloNumber?: string;
-  youtubeUrl?: string;
   facebookUrl?: string;
 }
 
@@ -21,7 +20,6 @@ export const SocialMediaBar: React.FC<SocialMediaBarProps> = ({
   position = "middle-right",
   phoneNumber = "0909746816",
   zaloNumber = "0909746816",
-  youtubeUrl = "#",
   facebookUrl = "https://www.facebook.com/profile.php?id=61592553366151&locale=vi_VN",
 }) => {
   // Determine tooltip orientation class

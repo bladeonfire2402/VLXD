@@ -52,7 +52,7 @@ const PolicyScreen = () => {
       for (let i = sections.length - 1; i >= 0; i--) {
         const sectionId = sections[i].id;
         const element = document.getElementById(sectionId);
-        
+
         if (element && element.offsetTop <= scrollPosition) {
           setActiveSection(sectionId);
           break;
@@ -92,8 +92,8 @@ const PolicyScreen = () => {
           <TableOfContents>
             {sections.map((section, idx) => (
               <TocItem key={section.id} $active={activeSection === section.id}>
-                <a 
-                  href={`#${section.id}`} 
+                <a
+                  href={`#${section.id}`}
                   onClick={(e) => scrollToSection(e, section.id)}
                 >
                   {idx + 1}. {section.title}
@@ -185,7 +185,7 @@ const PolicyScreen = () => {
             <PolicyText>
               <h4>Phạm vi giao hàng</h4>
               <p>Công ty hỗ trợ giao hàng tại Bình Dương và các khu vực lân cận. Khả năng giao hàng đến từng địa điểm cụ thể sẽ được xác nhận dựa trên loại hàng, khối lượng, phương tiện vận chuyển và điều kiện tiếp cận công trình.</p>
-              
+
               <h4>Thời gian giao hàng</h4>
               <ul>
                 <li>Thời gian giao hàng dự kiến sẽ được thông báo khi xác nhận đơn.</li>
@@ -341,7 +341,7 @@ const PolicyScreen = () => {
               <p>Liên hệ ngay với đội ngũ chăm sóc khách hàng của chúng tôi để được tư vấn và giải đáp.</p>
             </SupportInfo>
             <SupportButton href="tel:0909746816">
-              <Phone size={18} /> Hotline: 0909 746 816
+              <Phone size={18} /> Hotline: 0909 074 567
             </SupportButton>
           </SupportCard>
 

@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import NewsContentRenderer from '@/components/shared/NewsContentRenderer';
 import NewsCard from '@/components/ui/NewsCard';
 import { mockNews } from '@/data/mockNews';
-import { NewsArticle } from '@/interface/news/news';
+
 import {
   DetailContainer,
   BreadcrumbNav,

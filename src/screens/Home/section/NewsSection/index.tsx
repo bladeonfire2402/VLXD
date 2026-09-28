@@ -4,7 +4,6 @@ import NewsCard from '@/components/ui/NewsCard';
 import { SectionWrapper, Container, SectionHeader, Grid } from './styles';
 import { mockNews } from '@/data/mockNews';
 import { useRouter } from 'next/navigation';
-import { RouteManager } from '@/constants/route';
 
 const NewsSectionData = {
   TITLE: "TIN TỨC MỚI",
