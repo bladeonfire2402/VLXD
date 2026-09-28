@@ -3,7 +3,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, ArrowUpRight, Layers, Mountain, Box } from 'lucide-react';
-import Button from '../../components/ui/Button';
+import Button from '../../components/shared/ui/Button';
 import { RouteManager } from '@/constants/route';
 import { CategoryType } from '@/constants/data';
 import {
@@ -33,7 +33,7 @@ import {
 
 const NotFoundData = {
   TOP_LABEL: 'LỖI 404 • KHÔNG TÌM THẤY TRANG',
-  HEADING: <>Có vẻ bạn đã<br/>rẽ nhầm đường.</>,
+  HEADING: <>Có vẻ bạn đã<br />rẽ nhầm đường.</>,
   DESCRIPTION: 'Trang bạn đang tìm có thể đã được di chuyển, đổi tên hoặc không còn tồn tại. Hãy để chúng tôi đưa bạn về đúng nơi.',
   BTN_HOME: 'Về trang chủ',
   BTN_PRODUCTS: 'Xem vật liệu',
@@ -73,13 +73,13 @@ export default function NotFoundView() {
           <TopLabel>
             {NotFoundData.TOP_LABEL}
           </TopLabel>
-          
+
           <Heading>{NotFoundData.HEADING}</Heading>
-          
+
           <Description>
             {NotFoundData.DESCRIPTION}
           </Description>
-          
+
           <ButtonGroup>
             <Button variant="solid" onClick={() => router.push(RouteManager.HOME)}>
               <ArrowLeft size={18} style={{ marginRight: '8px' }} />
@@ -90,7 +90,7 @@ export default function NotFoundView() {
               <ArrowUpRight size={18} style={{ marginLeft: '8px' }} />
             </Button>
           </ButtonGroup>
-          
+
           <SupportText>
             {NotFoundData.SUPPORT_TEXT} <span className="link" onClick={() => router.push(RouteManager.CONTACT)}>{NotFoundData.SUPPORT_LINK}</span>
           </SupportText>
@@ -99,19 +99,19 @@ export default function NotFoundView() {
         <RightColumn>
           <Illustration404>
             <div className="grid-bg"></div>
-            
+
             <IllustrationNumber>
               <span className="digit">4</span>
               <span className="digit zero">0</span>
               <span className="digit">4</span>
             </IllustrationNumber>
-            
+
             <IllustrationBarrier>
               <div className="barrier-bar"></div>
               <div className="barrier-leg left"></div>
               <div className="barrier-leg right"></div>
             </IllustrationBarrier>
-            
+
             <div className="caption">{NotFoundData.ILLUSTRATION_CAPTION}</div>
           </Illustration404>
         </RightColumn>
@@ -122,7 +122,7 @@ export default function NotFoundView() {
           <SectionTitle>{NotFoundData.EXPLORE_TITLE}</SectionTitle>
           <div className="line"></div>
         </SectionDivider>
-        
+
         <ExploreGrid>
           {NotFoundData.EXPLORE_ITEMS.map((item, index) => {
             const IconComponent = item.icon;

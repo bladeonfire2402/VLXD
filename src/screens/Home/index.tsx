@@ -1,7 +1,7 @@
 "use client";
 
 import { HomeWrapper } from './styles';
-import Carousel from '@/components/ui/Carousel';
+import Carousel from '@/components/shared/ui/Carousel';
 import FeaturedProducts from './section/FeaturedProducts';
 import CategoryShowCase from './section/CategoryShowCase';
 import FAQAndCommitments from './section/FAQAndCommitments';
@@ -13,7 +13,7 @@ import { AssetManagers } from '@/constants/assets';
 const HomeScreen = () => {
   return (
     <HomeWrapper>
-      <Carousel images={AssetManagers.banners} autoPlay={true} interval={4000} hideButtonCtr={true} />
+      <Carousel images={AssetManagers.banners} autoPlay={true} interval={4000} hideButtonCtr={true} height={450}/>
       <FeaturedProducts />
       <CategoryShowCase />
       <FAQAndCommitments />

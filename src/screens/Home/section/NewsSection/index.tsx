@@ -1,6 +1,6 @@
 import React from 'react';
-import SectionTitle from '@/components/ui/SectionTitle';
-import NewsCard from '@/components/ui/NewsCard';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
+import NewsCard from '@/components/shared/ui/NewsCard';
 import { SectionWrapper, Container, SectionHeader, Grid } from './styles';
 import { mockNews } from '@/data/mockNews';
 import { useRouter } from 'next/navigation';
@@ -28,11 +28,11 @@ const mappedNewsList = mockNews.slice(0, 6).map((news) => {
 
 const NewsSection = () => {
   const router = useRouter();
-  
+
   const handleArticleClick = (slug: string) => {
     router.push(`/tin-tuc/${slug}`);
   };
-  
+
   return (
     <SectionWrapper>
       <Container>

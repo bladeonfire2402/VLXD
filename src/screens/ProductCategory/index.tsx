@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import SectionTitle from '@/components/ui/SectionTitle';
-import ProductCard from '@/components/ui/ProductCard';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
+import ProductCard from '@/components/shared/ui/ProductCard';
 import { Product } from '@/interface/product/product';
 import { PageWrapper, Description, ProductGrid } from './styles';
 

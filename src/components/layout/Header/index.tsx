@@ -3,7 +3,7 @@
 import { DesktopHeader } from "./DesktopHeader";
 import { MobileHeader } from "./MobileHeader";
 import { GlobalHeader } from "./styles";
-import Breadcrumb from "@/components/ui/Breadcrumb";
+import Breadcrumb from "@/components/shared/ui/Breadcrumb";
 
 export const Header = () => {
   return (

@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Providers } from "@/store/provider";
 import StyledComponentsRegistry from "@/lib/registry";
-import { GlobalModalManager } from "@/components/shared/modal/GlobalModalManager";
+import { GlobalModalManager } from "@/components/shared/ui/modal/GlobalModalManager";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SocialMediaBar } from "@/components/layout/social-media-bar";

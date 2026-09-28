@@ -2,8 +2,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import NewsContentRenderer from '@/components/shared/NewsContentRenderer';
-import NewsCard from '@/components/ui/NewsCard';
+import NewsContentRenderer from '@/components/shared/ui/NewsContentRenderer';
+import NewsCard from '@/components/shared/ui/NewsCard';
 import { mockNews } from '@/data/mockNews';
 
 import {

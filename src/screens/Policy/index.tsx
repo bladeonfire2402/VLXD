@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { AlertCircle, Phone } from 'lucide-react';
-import Breadcrumb from '@/components/ui/Breadcrumb';
+import Breadcrumb from '@/components/shared/ui/Breadcrumb';
 import {
   PolicyContainer,
   HeroSection,

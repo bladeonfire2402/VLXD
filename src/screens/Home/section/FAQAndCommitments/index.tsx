@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
-import AccordionItem from '@/components/ui/AccordionItem';
+import AccordionItem from '@/components/shared/ui/AccordionItem';
 import {
   SectionWrapper,
   Container,

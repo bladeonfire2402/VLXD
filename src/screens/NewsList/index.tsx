@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import NewsCard from '@/components/ui/NewsCard';
-import Pagination from '@/components/ui/Pagination';
+import NewsCard from '@/components/shared/ui/NewsCard';
+import Pagination from '@/components/shared/ui/Pagination';
 import { mockNews } from '@/data/mockNews';
 import {
   NewsListContainer,

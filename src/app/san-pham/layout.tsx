@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import ProductSidebar from '@/components/shared/ProductSidebar';
+import ProductSidebar from '@/components/shared/ui/ProductSidebar';
 
 const LayoutGrid = styled.div`
   max-width: 1200px;

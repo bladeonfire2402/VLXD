@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import SectionTitle from '@/components/ui/SectionTitle';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
 
 export const SectionWrapper = styled.section`
   background-color: #000000;

@@ -12,7 +12,7 @@ export const CarouselTrack = styled.div<{ $currentIndex: number; $height?: numbe
   width: 100%;
   transition: transform 0.5s ease-in-out;
   transform: translateX(-${props => props.$currentIndex * 100}%);
-  height: ${props => typeof props.$height === 'number' ? `${props.$height}px` : props.$height || '350px'};
+  height: ${props => typeof props.$height === 'number' ? `${props.$height}px` : props.$height || '400px'};
 `;
 
 export const CarouselSlide = styled.div`

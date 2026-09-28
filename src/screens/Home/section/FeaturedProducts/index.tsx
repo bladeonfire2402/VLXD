@@ -1,9 +1,9 @@
 "use client";
 
 import React from 'react';
-import SectionTitle from '@/components/ui/SectionTitle';
-import ProductCard from '@/components/ui/ProductCard';
-import Button from '@/components/ui/Button';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
+import ProductCard from '@/components/shared/ui/ProductCard';
+import Button from '@/components/shared/ui/Button';
 import { useRouter } from 'next/navigation';
 import { RouteManager } from '@/constants/route';
 import { MOCK_FEATURED_PRODUCTS } from '@/constants/data';

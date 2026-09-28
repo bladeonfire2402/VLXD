@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { User, Phone, Mail, PenLine, MessageCircle } from 'lucide-react';
 import { Product } from '@/interface/product/product';
-import SectionTitle from '@/components/ui/SectionTitle';
-import ProductCard from '@/components/ui/ProductCard';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
+import ProductCard from '@/components/shared/ui/ProductCard';
 import {
   HeroGrid,
   GalleryWrapper,

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import SectionTitle from '@/components/ui/SectionTitle';
-import ProductCard from '@/components/ui/ProductCard';
+import SectionTitle from '@/components/shared/ui/SectionTitle';
+import ProductCard from '@/components/shared/ui/ProductCard';
 import { Product } from '@/interface/product/product';
 import { RouteManager } from '@/constants/route';
 import { PageWrapper, EmptyState, ProductGrid } from './styles';
