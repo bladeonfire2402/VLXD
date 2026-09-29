@@ -19,7 +19,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onClickAction }) => {
   return (
-    <Link href={RouteManager.productDetail(product.categorySlug, product.slug)} style={{ textDecoration: 'none' }}>
+    <Link href={RouteManager.productDetail(product.categorySlug, product.slug)} style={{ textDecoration: 'none', height: '100%', display: 'block' }}>
       <CardWrapper>
         <ImageContainer>
           <ProductImage

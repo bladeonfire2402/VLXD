@@ -12,6 +12,7 @@ export const CardWrapper = styled.div`
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
   cursor: pointer;
+  height: 100%;
 
   &:hover {
     transform: translateY(-4px);
@@ -51,4 +52,5 @@ export const ActionText = styled.span`
   cursor: pointer;
   font-weight: 500;
   transition: color 0.2s ease;
+  margin-top: auto;
 `;
