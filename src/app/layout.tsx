@@ -10,6 +10,7 @@ import { GlobalModalManager } from "@/components/shared/ui/modal/GlobalModalMana
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SocialMediaBar } from "@/components/layout/social-media-bar";
+import { Analytics } from "@vercel/analytics/react"
 
 const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin", "vietnamese"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body className={roboto.className}>
+        <Analytics />
         <StyledComponentsRegistry>
           <Providers>
             {/* Layer 1: Layout Wrapper */}
