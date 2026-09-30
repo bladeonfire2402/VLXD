@@ -18,9 +18,9 @@ import {
 } from './styles';
 
 const CATEGORIES = [
-  { name: 'CÁT XÂY DỰNG', image: AssetManagers.products.gachCui, slug: CategoryType.CAT_XAY_DUNG },
-  { name: 'ĐÁ XÂY DỰNG', image: AssetManagers.products.gachNgoi, slug: CategoryType.DA_XAY_DUNG },
-  { name: 'BÊ TÔNG THƯƠNG PHẨM', image: AssetManagers.products.gachCui, slug: CategoryType.BE_TONG_THUONG_PHAM }
+  { name: 'CÁT XÂY DỰNG', image: AssetManagers.products.catVang, slug: CategoryType.CAT_XAY_DUNG },
+  { name: 'ĐÁ XÂY DỰNG', image: AssetManagers.products.da1x2, slug: CategoryType.DA_XAY_DUNG },
+  { name: 'BÊ TÔNG THƯƠNG PHẨM', image: AssetManagers.products.beTong, slug: CategoryType.BE_TONG_THUONG_PHAM }
 ];
 
 const CategoryShowCase = () => {

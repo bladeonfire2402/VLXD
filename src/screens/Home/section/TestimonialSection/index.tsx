@@ -24,21 +24,21 @@ const TestimonialSectionData = {
       name: 'TRẦN MINH KHÔI',
       role: '/ NHÀ THẦU XÂY DỰNG',
       avatar: AssetManagers.testimonials.avatar1,
-      quote: 'Anh Tuấn cung cấp sắt thép đúng quy cách, đầy đủ chứng từ và bảo đảm tiến độ giao hàng. Đội ngũ tư vấn chuyên nghiệp, phản hồi nhanh chóng, giúp chúng tôi chủ động triển khai các công trình.'
+      quote: 'Chúng tôi đánh giá cao sự chuyên nghiệp, minh bạch và tinh thần trách nhiệm của Anh Tuấn. Trong quá trình hợp tác, đội ngũ luôn phối hợp chặt chẽ, trao đổi rõ ràng và thực hiện đúng những cam kết đã thống nhất.'
     },
     {
       id: 2,
       name: 'LÊ QUỐC BẢO',
       role: '/ CHỦ CỬA HÀNG VẬT LIỆU XÂY DỰNG',
       avatar: AssetManagers.testimonials.avatar2,
-      quote: 'Chúng tôi đánh giá cao sự ổn định về chất lượng sản phẩm và khả năng cung ứng của Anh Tuấn. Hàng hóa được giao đúng số lượng, báo giá minh bạch và chính sách hỗ trợ đối tác rất tận tâm.'
+      quote: 'Anh Tuấn làm việc chuyên nghiệp và giữ liên lạc xuyên suốt quá trình hợp tác. Những vấn đề phát sinh được trao đổi và xử lý kịp thời, giúp chúng tôi chủ động trong kế hoạch của mình.'
     },
     {
       id: 3,
       name: 'NGUYỄN THÀNH ĐẠT',
       role: '/ KỸ SƯ XÂY DỰNG',
       avatar: AssetManagers.testimonials.avatar3,
-      quote: 'Sản phẩm do Anh Tuấn phân phối có nguồn gốc rõ ràng và đáp ứng tốt các yêu cầu kỹ thuật của công trình. Đội ngũ làm việc trách nhiệm, tư vấn chính xác và luôn hỗ trợ kịp thời khi cần.'
+      quote: 'Điều tôi đánh giá cao ở Anh Tuấn là cách làm việc rõ ràng và trách nhiệm. Đội ngũ trao đổi thẳng thắn, phản hồi kịp thời và luôn chủ động phối hợp để công việc diễn ra thuận lợi.'
     }
   ]
 };

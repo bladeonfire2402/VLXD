@@ -20,23 +20,22 @@ const FAQAndCommitmentsData = {
   FAQs: [
     {
       title: 'Anh Tuấn hoạt động từ khi nào?',
-      content: 'Công ty TNHH SX-TM-DV Anh Tuấn chính thức đi vào hoạt động từ năm 2021, chuyên cung cấp và phân phối các sản phẩm sắt thép xây dựng tại Bình Dương và các khu vực lân cận. Với phương châm lấy chất lượng sản phẩm, uy tín và sự hài lòng của khách hàng làm nền tảng phát triển, Anh Tuấn không ngừng nâng cao năng lực phục vụ, từng bước khẳng định vị thế và trở thành đối tác tin cậy của khách hàng trong lĩnh vực vật liệu xây dựng.',
+      content: 'Công ty TNHH Anh Tuấn hoạt động từ năm 2021 trong lĩnh vực cung cấp và phân phối vật liệu xây dựng tại Bình Dương và các khu vực lân cận. Với định hướng trở thành đối tác cung ứng vật tư đáng tin cậy cho các công trình, Anh Tuấn chú trọng chất lượng sản phẩm, năng lực phục vụ và uy tín trong từng mối quan hệ hợp tác. Đây là những nền tảng để công ty đáp ứng nhu cầu của khách hàng và phát triển bền vững trong ngành vật liệu xây dựng',
       isOpen: true
     },
     {
       title: 'Phương châm hoạt động',
-      content: 'Công ty TNHH SX–TM–DV Anh Tuấn luôn lấy quyền lợi và sự hài lòng của khách hàng làm nền tảng cho mọi hoạt động. Với phương châm “Uy tín – Chất lượng – Hiệu quả”, chúng tôi không ngừng nâng cao chất lượng sản phẩm, hoàn thiện dịch vụ và tối ưu quy trình cung ứng, nhằm mang đến những giải pháp vật liệu xây dựng phù hợp, minh bạch và đáng tin cậy cho từng công trình.',
+      content: 'Công ty TNHH Anh Tuấn đặt uy tín, chất lượng và hiệu quả làm nguyên tắc trong hoạt động cung ứng vật liệu xây dựng. Chúng tôi chú trọng chất lượng sản phẩm, sự minh bạch trong hợp tác và khả năng đáp ứng nhu cầu vật tư của từng công trình, qua đó xây dựng quan hệ bền vững với khách hàng và đối tác',
       isOpen: false
     },
     {
       title: 'Anh Tuấn phân phối những sản phẩm nào?',
-      content: 'Công ty TNHH SX–TM–DV Anh Tuấn chuyên cung cấp và phân phối đa dạng vật liệu xây dựng, bao gồm sắt thép xây dựng, xi măng, gạch tuynel, cát, đá và nhiều sản phẩm liên quan. Với nguồn hàng ổn định và quy trình cung ứng chuyên nghiệp, Anh Tuấn đáp ứng linh hoạt nhu cầu của các công trình dân dụng, thương mại và công nghiệp.',
+      content: 'Công ty TNHH SX–TM–DV Anh Tuấn cung cấp và phân phối xi măng, cát, đá cùng các vật liệu liên quan. Danh mục sản phẩm đa dạng, nguồn hàng ổn định và quy trình cung ứng chuyên nghiệp giúp chúng tôi đáp ứng nhu cầu vật tư cho các công trình dân dụng, thương mại và công nghiệp',
       isOpen: false
     }
   ],
   COMMITMENTS: [
     'Giá cả minh bạch, cạnh tranh',
-    'Sản phẩm đúng tiêu chuẩn',
     'Tư vấn tận tâm, chuyên nghiệp',
     'Giao hàng đúng hẹn',
     'Đồng hành cùng khách hàng'

@@ -28,7 +28,7 @@ import {
 } from "./styles";
 
 const MobileHeaderData = {
-  LOGO_SRC: AssetManagers.branding.logoWithSlogan,
+  LOGO_SRC: AssetManagers.branding.logo,
   LOGO_ALT: "Tu Thanh Phat Logo",
   MENU_ARIA_LABEL: "Toggle Menu",
   SEARCH_LABEL: "Tìm kiếm",

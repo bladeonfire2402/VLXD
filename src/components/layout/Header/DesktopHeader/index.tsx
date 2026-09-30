@@ -33,7 +33,7 @@ import {
 } from "./styles";
 
 const DesktopHeaderData = {
-  LOGO_SRC: AssetManagers.branding.logoWithSlogan,
+  LOGO_SRC: AssetManagers.branding.logo,
   LOGO_ALT: "Anh Tuấn Logo",
   ADDRESS: "Số 14, KP3, P. Hòa Lợi, TP. Bến Cát, Bình Dương",
   HOTLINE: "0909 074 567",

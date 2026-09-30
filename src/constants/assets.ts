@@ -19,6 +19,18 @@ export const AssetManagers = {
     products: {
         gachCui: '/images/product/gach_cui.png',
         gachNgoi: '/images/product/gach_ngoi.png',
+        catSanLap: '/images/product/cat-san-lap.png',
+        catXayTo: '/images/product/cat-xay-to.png',
+        catVang: '/images/product/cat-vang.png',
+        da1x2: '/images/product/da-1x2.png',
+        da4x6: '/images/product/da-4x6.png',
+        da5x7: '/images/product/da-5x7.png',
+        da0x4: '/images/product/da-0x4.png',
+        daMiSang: '/images/product/da-mi-sang.png',
+        daMiBui: '/images/product/da-mi-bui.png',
+        daHoc: '/images/product/da-hoc.png',
+        daChe: '/images/product/da-che.png',
+        beTong: '/images/product/be-tong.png',
     },
     partners: {
         qh: '/images/partners/qh.png',
